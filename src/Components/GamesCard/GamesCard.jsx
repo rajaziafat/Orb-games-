@@ -2,11 +2,13 @@ import { MdArrowOutward } from "react-icons/md";
 import { IoPlay } from "react-icons/io5";
 const GamesCard = (props) => {
   return (
-    <div className={`bg-[#1A1B22] h-[513px] p-5 rounded-xl ${props.className}`}>
+    <div
+      className={`bg-[#1A1B22] h-[513px]  sm:h-max p-5 rounded-xl ${props.className}`}
+    >
       <div className="relative h-[295px]">
         <img
           src={`/Images/game${props.index}.png`}
-          className="w-full h-full"
+          className="w-full h-full sm:object-cover"
           loading="lazy"
           alt=""
         />
@@ -14,10 +16,10 @@ const GamesCard = (props) => {
           <IoPlay />
         </button>
       </div>
-      <h3 className="text-white font-semibold font-popins text-2xl mt-3">
+      <h3 className="text-white font-semibold font-popins text-2xl mt-3 sm:text-xl">
         GAME # {props.index}
       </h3>
-      <p className="text-[#A1A1A1] font-popins text-lg mt-3 mb-5">
+      <p className="text-[#A1A1A1] sm:text-base font-popins text-lg mt-3 mb-5">
         {props.description}
       </p>
       <button className="text-white font-popins text-lg font-semibold flex justify-center gap-x-2 items-center">

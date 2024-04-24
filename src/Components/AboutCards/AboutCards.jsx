@@ -1,10 +1,10 @@
 const AboutCards = (props) => {
   return (
     <div
-      className={`flex text-white gap-10 justify-center ${props.direction} md:flex-col md:items-center`}
+      className={`flex text-white gap-10 justify-center ${props.direction} md:flex-col-reverse md:items-center`}
     >
       <div
-        className={`w-[382px] h-[350px] sm:w-full ${props.gradientBg} rounded-2xl flex flex-col gap-y-5 px-7 py-9`}
+        className={`w-[382px] h-[350px] sm:h-max sm:w-full ${props.gradientBg} rounded-2xl flex flex-col gap-y-5 px-7 py-9`}
       >
         <div className="w-20 h-20  flex justify-center items-center about-card-icon-bg rounded-xl">
           {props.icon}
