@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .nav-links-bg {
+    background: linear-gradient(
+      0deg,
+      #27282d -15.47%,
+      #0e101c 129.85%,
+      #828493 129.86%
+    );
+  }
+  .orange-gradient {
+    background: linear-gradient(180deg, #ff7136 0%, #fc5104 100%);
+  }
+  .blue-gradient {
+    background: linear-gradient(46.41deg, #455bf5 3.03%, #8d9cff 96.97%);
+  }
+  .purple-gradient {
+    background: linear-gradient(180deg, #b57aff 0%, #950fff 100%);
+  }
+  .about-card-icon-bg {
+    background: linear-gradient(
+      48.21deg,
+      #ffffff 7.36%,
+      rgba(255, 255, 255, 0.06) 91.67%
+    );
+    mix-blend-mode: soft-light;
+    -webkit-mix-blend-mode: soft-light;
+  }
+}
