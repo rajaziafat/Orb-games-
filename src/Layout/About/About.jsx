@@ -4,7 +4,7 @@ import { Dev, Game, Hand } from "../../utils/constants/Icons";
 
 const About = () => {
   return (
-    <div className="bg-[#0E101C] py-8 pt-12 relative">
+    <div className="bg-[#0E101C] py-8 pt-12 relative -translate-y-1">
       <svg
         width="386"
         height="600"
