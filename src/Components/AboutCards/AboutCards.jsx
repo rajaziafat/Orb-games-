@@ -12,7 +12,7 @@ const AboutCards = (props) => {
         <h3 className=" font-popins font-semibold text-2xl">{props.title}</h3>
         <p className="text-base font-popins">{props.description}</p>
       </div>
-      <div className=" w-8/12 md:w-full">
+      <div className=" w-7/12 xl:w-8/12 md:w-full">
         {/* <div className=" w-9/12 h-[500px]"> */}
         <img
           loading="lazy"

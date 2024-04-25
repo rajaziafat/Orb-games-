@@ -10,7 +10,7 @@ const Games = () => {
             View More
           </button>
         </div>
-        <div className="flex mt-9 gap-10 flex-wrap justify-center w-full">
+        <div className="flex mt-9 gap-14 xl:gap-10 sm:gap-10 flex-wrap justify-center w-full">
           <GamesCard
             index={1}
             className="w-[488px] sm:w-full lg:w-[349px]"

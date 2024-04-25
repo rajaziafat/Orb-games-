@@ -5,6 +5,53 @@ import { Dev, Game, Hand } from "../../utils/constants/Icons";
 const About = () => {
   return (
     <div className="bg-[#0E101C] py-8 pt-12 relative">
+      <svg
+        width="386"
+        height="600"
+        viewBox="0 0 386 600"
+        className="absolute -top-32 left-0"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g filter="url(#filter0_f_3216_4)">
+          <circle cx="86" cy="300" r="148" fill="url(#paint0_linear_3216_4)" />
+        </g>
+        <defs>
+          <filter
+            id="filter0_f_3216_4"
+            x="-213.899"
+            y="0.101273"
+            width="599.797"
+            height="599.797"
+            filterUnits="userSpaceOnUse"
+            colorInterpolationFilters="sRGB"
+          >
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
+            <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="BackgroundImageFix"
+              result="shape"
+            />
+            <feGaussianBlur
+              stdDeviation="75.9494"
+              result="effect1_foregroundBlur_3216_4"
+            />
+          </filter>
+          <linearGradient
+            id="paint0_linear_3216_4"
+            x1="86"
+            y1="152"
+            x2="86"
+            y2="448"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#4B4B50" />
+            <stop offset="1" stopColor="#24252D" />
+          </linearGradient>
+        </defs>
+      </svg>
+
       <img
         src="/Images/radial.svg"
         className="absolute top-0 left-0 w-full h-full z-10"

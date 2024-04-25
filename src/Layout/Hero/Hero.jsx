@@ -6,7 +6,7 @@ const Hero = () => {
       <NavBar />
       <div className="pt-24">
         <Helmet>
-          <h3 className="text-white text-xl  font-neuro grid grid-flow-col items-center sm:text-sm">
+          <h3 className="text-white text-xl w-max sm:w-full  font-neuro grid grid-flow-col items-center sm:text-sm">
             Web3 Gaming in Orbit
             <span className="orange-gradient w-14 h-14 sm:w-10 sm:h-10 sm:text-base sm:text-center flex justify-center items-center rounded-full mx-2 ">
               ON
