@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       backgroundImage: {
-        heroBg: "url('Images/Heros-bg.webp')",
-        heromobileBg: "url('Images/mobile.png')",
+        heroBg: "url('/Images/Heros-bg.webp')",
+        heromobileBg: "url('/Images/mobile.png')",
       },
       fontFamily: {
         popins: "['Poppins', sans-serif]",
