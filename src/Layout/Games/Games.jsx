@@ -2,7 +2,7 @@ import GamesCard from "../../Components/GamesCard/GamesCard";
 import Helmet from "../../Components/Helmet/Helmet";
 const Games = () => {
   return (
-    <div className="pt-16 pb-10 bg-[#0E101C]">
+    <div className="pt-16 pb-10 bg-[#0E101C] -translate-y-1">
       <Helmet>
         <div className="border border-[#2E2E31] rounded-2xl flex justify-between items-center px-4 py-4 sm:justify-center">
           <h3 className="text-white font-neuro text-3xl sm:text-4xl">Games</h3>
