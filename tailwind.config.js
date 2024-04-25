@@ -16,6 +16,8 @@ export default {
       backgroundImage: {
         heroBg: "url('/Images/Heros-bg.webp')",
         heromobileBg: "url('/Images/mobile.png')",
+        scoailBg: "url('/Images/Social.png')",
+        scoailMobileBg: "url('/Images/social-mobile.png')",
       },
       fontFamily: {
         popins: "['Poppins', sans-serif]",

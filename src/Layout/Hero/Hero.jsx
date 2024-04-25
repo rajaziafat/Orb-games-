@@ -16,8 +16,8 @@ const Hero = () => {
           <h1 className="text-7xl text-white my-7 font-neuro sm:text-center sm:text-6xl sm:leading-[100px] xsm:text-5xl xsm:leading-[60px]">
             Play, <br className="sm:hidden" /> Prosper, Build
           </h1>
-          <button className="orange-gradient w-[209px] mt-4 h-14 rounded-md  text-white font-popins sm:block sm:mx-auto">
-            Read Whitepaper
+          <button className="btn-bg w-[209px] mt-4 h-14 rounded-md  font-popins sm:block sm:mx-auto">
+            <span className="relative  z-10">Read Whitepaper</span>
           </button>
         </Helmet>
       </div>

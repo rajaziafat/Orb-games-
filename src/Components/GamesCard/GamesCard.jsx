@@ -16,7 +16,7 @@ const GamesCard = (props) => {
           <IoPlay />
         </button>
       </div>
-      <h3 className="text-white font-semibold font-popins text-2xl mt-3 sm:text-xl">
+      <h3 className="text-white font-semibold font-popins text-xl mt-3 sm:text-xl">
         GAME # {props.index}
       </h3>
       <p className="text-[#A1A1A1] sm:text-base font-popins text-lg mt-3 mb-5">

@@ -11,6 +11,36 @@
       #828493 129.86%
     );
   }
+  /* Style For the Button Component */
+  .btn-bg {
+    position: relative;
+    background: white;
+    color: #fff;
+    transition: color 0.2s;
+    overflow: hidden;
+  }
+
+  .btn-bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: linear-gradient(180deg, #ff7136 0%, #fc5104 100%);
+    opacity: 1;
+    transition: opacity 0.2s;
+    z-index: 1;
+  }
+
+  .btn-bg:hover::after {
+    opacity: 0;
+  }
+
+  .btn-bg:hover {
+    color: #ff7136;
+  }
   .orange-gradient {
     background: linear-gradient(180deg, #ff7136 0%, #fc5104 100%);
   }
@@ -29,4 +59,16 @@
     mix-blend-mode: soft-light;
     -webkit-mix-blend-mode: soft-light;
   }
+}
+.swiper-pagination-bullet {
+  background: linear-gradient(180deg, #ff7136 0%, #fc5104 100%) !important;
+  width: 25px !important;
+  height: 25px !important;
+  margin: 0px 9px !important;
+  opacity: 0.4 !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+  outline: 8px solid rgba(255, 113, 54, 0.3) !important ;
 }

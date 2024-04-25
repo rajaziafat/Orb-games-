@@ -104,3 +104,103 @@ export const Dev = () => {
     </svg>
   );
 };
+
+export const TeamSmallGradientCircle = () => {
+  return (
+    <svg
+      width="258"
+      height="258"
+      viewBox="0 0 258 258"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g filter="url(#filter0_f_3216_243)">
+        <circle cx="129" cy="129" r="79" fill="url(#paint0_linear_3216_243)" />
+      </g>
+      <defs>
+        <filter
+          id="filter0_f_3216_243"
+          x="0"
+          y="0"
+          width="258"
+          height="258"
+          filterUnits="userSpaceOnUse"
+          colorInterpolationFilters="sRGB"
+        >
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="BackgroundImageFix"
+            result="shape"
+          />
+          <feGaussianBlur
+            stdDeviation="25"
+            result="effect1_foregroundBlur_3216_243"
+          />
+        </filter>
+        <linearGradient
+          id="paint0_linear_3216_243"
+          x1="129"
+          y1="50"
+          x2="129"
+          y2="208"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#4B4B50" />
+          <stop offset="1" stopColor="#24252D" />
+        </linearGradient>
+      </defs>
+    </svg>
+  );
+};
+
+export const TeamLeftGradient = () => {
+  return (
+    <svg
+      width="448"
+      height="784"
+      viewBox="0 0 448 784"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g filter="url(#filter0_f_3216_244)">
+        <circle cx="56" cy="392" r="240" fill="url(#paint0_linear_3216_244)" />
+      </g>
+      <defs>
+        <filter
+          id="filter0_f_3216_244"
+          x="-335.899"
+          y="0.101273"
+          width="783.797"
+          height="783.797"
+          filterUnits="userSpaceOnUse"
+          colorInterpolationFilters="sRGB"
+        >
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="BackgroundImageFix"
+            result="shape"
+          />
+          <feGaussianBlur
+            stdDeviation="75.9494"
+            result="effect1_foregroundBlur_3216_244"
+          />
+        </filter>
+        <linearGradient
+          id="paint0_linear_3216_244"
+          x1="56"
+          y1="152"
+          x2="56"
+          y2="632"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#4B4B50" />
+          <stop offset="1" stopColor="#24252D" />
+        </linearGradient>
+      </defs>
+    </svg>
+  );
+};

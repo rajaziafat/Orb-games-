@@ -2,7 +2,7 @@ import GamesCard from "../../Components/GamesCard/GamesCard";
 import Helmet from "../../Components/Helmet/Helmet";
 const Games = () => {
   return (
-    <div className="pt-16 pb-10 bg-[#0E101C] -translate-y-1">
+    <div className="pt-16 pb-10 bg-[#0E101C]  -translate-y-1 relative">
       <Helmet>
         <div className="border border-[#2E2E31] rounded-2xl flex justify-between items-center px-4 py-4 sm:justify-center">
           <h3 className="text-white font-neuro text-3xl sm:text-4xl">Games</h3>
@@ -10,7 +10,7 @@ const Games = () => {
             View More
           </button>
         </div>
-        <div className="flex mt-9 gap-14 xl:gap-10 sm:gap-10 flex-wrap justify-center w-full">
+        <div className="flex mt-9 gap-8 xl:gap-10 sm:gap-10 flex-wrap justify-center w-full">
           <GamesCard
             index={1}
             className="w-[488px] sm:w-full lg:w-[349px]"
@@ -31,6 +31,7 @@ const Games = () => {
           View More
         </button>
       </Helmet>
+      <div className="absolute bottom-0 left-0 bg-[#0E101C]  w-full h-2 translate-y-1"></div>
     </div>
   );
 };
