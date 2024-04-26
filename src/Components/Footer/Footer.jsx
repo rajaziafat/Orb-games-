@@ -18,27 +18,47 @@ const Footer = () => {
               </h2>
               <ul className="text-[#A1A1A1] text-lg flex items-center gap-5 mt-7 flex-wrap pr-4 md:text-base md:justify-center">
                 <li>
-                  <Link className="cursor-pointer duration-500 hover:text-white">
+                  <Link
+                    smooth={true}
+                    to="home"
+                    className="cursor-pointer duration-500 hover:text-white"
+                  >
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link className="cursor-pointer duration-500 hover:text-white">
+                  <Link
+                    smooth={true}
+                    to="games"
+                    className="cursor-pointer duration-500 hover:text-white"
+                  >
                     Games
                   </Link>
                 </li>
                 <li>
-                  <Link className="cursor-pointer duration-500 hover:text-white">
+                  <Link
+                    smooth={true}
+                    to="about"
+                    className="cursor-pointer duration-500 hover:text-white"
+                  >
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link className="cursor-pointer duration-500 hover:text-white">
+                  <Link
+                    smooth={true}
+                    to="team"
+                    className="cursor-pointer duration-500 hover:text-white"
+                  >
                     Teams
                   </Link>
                 </li>
                 <li>
-                  <Link className="cursor-pointer duration-500 hover:text-white">
+                  <Link
+                    smooth={true}
+                    to=""
+                    className="cursor-pointer duration-500 hover:text-white"
+                  >
                     Contact Us
                   </Link>
                 </li>

@@ -4,12 +4,12 @@ import { Dev, Game, Hand } from "../../utils/constants/Icons";
 
 const About = () => {
   return (
-    <div className="bg-[#0E101C] py-8 pt-12 relative ">
+    <div className="bg-[#0E101C] py-8 pt-12 relative about overflow-hidden">
       <svg
         width="386"
         height="600"
         viewBox="0 0 386 600"
-        className="absolute -top-32 left-0"
+        className="absolute -top-32 left-0 "
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -58,7 +58,7 @@ const About = () => {
         alt=""
       />
       <Helmet>
-        <h2 className="text-center text-5xl my-12 font-neuro leading-[59px] text-white sm:text-4xl xsm:text-3xl xsm:leading-10">
+        <h2 className="text-center text-5xl z-20 relative my-12 font-neuro leading-[59px] text-white sm:text-4xl xsm:text-3xl xsm:leading-10">
           Web3 Gaming Unleashed <span className="block"></span> on Orb Games
         </h2>
         <div className="mt-24 flex gap-24 flex-wrap relative z-30 sm:gap-20 sm:mt-20">

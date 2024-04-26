@@ -2,9 +2,9 @@ import NavBar from "../../Components/NavBar/NavBar";
 import Helmet from "../../Components/Helmet/Helmet";
 const Hero = () => {
   return (
-    <div className="bg-heroBg sm:bg-heromobileBg bg-cover bg-no-repeat min-h-screen h-[1277px] bg-center">
+    <div className="bg-heroBg home sm:bg-heromobileBg bg-cover bg-no-repeat min-h-screen h-[1277px] bg-center">
       <NavBar />
-      <div className="pt-24">
+      <div className="pt-24 ">
         <Helmet>
           <h3 className="text-white text-xl w-max sm:w-full  font-neuro grid grid-flow-col items-center sm:text-sm">
             Web3 Gaming in Orbit

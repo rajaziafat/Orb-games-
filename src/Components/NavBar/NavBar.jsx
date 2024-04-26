@@ -18,22 +18,38 @@ const NavBar = () => {
           <div className="nav-links-bg rounded-xl py-4 px-3 shadow-md slg:hidden">
             <ul className="flex items-center gap-x-4">
               <li>
-                <Link className="cursor-pointer bg-white w-[129px] h-12 flex justify-center items-center font-popins rounded-md font-medium text-black">
+                <Link
+                  smooth={true}
+                  to="home"
+                  className="cursor-pointer bg-white w-[129px] h-12 flex justify-center items-center font-popins rounded-md font-medium text-black"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link className="cursor-pointer hover:text-black hover:bg-white duration-500 text-white w-[129px] h-12 flex justify-center items-center font-popins rounded-md  ">
+                <Link
+                  smooth={true}
+                  to="games"
+                  className="cursor-pointer hover:text-black hover:bg-white duration-500 text-white w-[129px] h-12 flex justify-center items-center font-popins rounded-md  "
+                >
                   Games
                 </Link>
               </li>
               <li>
-                <Link className="cursor-pointer hover:text-black hover:bg-white duration-500 text-white w-[129px] h-12 flex justify-center items-center font-popins rounded-md  ">
+                <Link
+                  smooth={true}
+                  to="about"
+                  className="cursor-pointer hover:text-black hover:bg-white duration-500 text-white w-[129px] h-12 flex justify-center items-center font-popins rounded-md  "
+                >
                   About
                 </Link>
               </li>
               <li>
-                <Link className="cursor-pointer hover:text-black hover:bg-white duration-500 text-white w-[129px] h-12 flex justify-center items-center font-popins rounded-md  ">
+                <Link
+                  smooth={true}
+                  to="team"
+                  className="cursor-pointer hover:text-black hover:bg-white duration-500 text-white w-[129px] h-12 flex justify-center items-center font-popins rounded-md  "
+                >
                   Team
                 </Link>
               </li>
@@ -52,7 +68,7 @@ const NavBar = () => {
 
           {/* Mobile Menu */}
           <div
-            className={` shadow-md fixed  left-0 bg-[#0F101B]  w-full slg:flex hidden  items-center top-0 duration-500 overflow-hidden h-full flex-col justify-between ${
+            className={` shadow-md fixed z-40  left-0 bg-[#0F101B]  w-full slg:flex hidden  items-center top-0 duration-500 overflow-hidden h-full flex-col justify-between ${
               showNavBar ? "translate-x-0" : "-translate-x-full"
             }`}
           >
@@ -72,6 +88,8 @@ const NavBar = () => {
             <ul className="flex items-center gap-x-4 flex-col h-4/5 justify-center gap-y-9">
               <li>
                 <Link
+                  smooth={true}
+                  to=""
                   onClick={() => setShowNavBar(false)}
                   className="cursor-pointer bg-white w-[129px] h-12 flex justify-center items-center font-popins rounded-md font-medium text-black"
                 >
@@ -80,6 +98,8 @@ const NavBar = () => {
               </li>
               <li>
                 <Link
+                  smooth={true}
+                  to=""
                   onClick={() => setShowNavBar(false)}
                   className="cursor-pointer hover:text-black hover:bg-white duration-500 text-white w-[129px] h-12 flex justify-center items-center font-popins rounded-md  "
                 >
@@ -88,6 +108,8 @@ const NavBar = () => {
               </li>
               <li>
                 <Link
+                  smooth={true}
+                  to=""
                   onClick={() => setShowNavBar(false)}
                   className="cursor-pointer hover:text-black hover:bg-white duration-500 text-white w-[129px] h-12 flex justify-center items-center font-popins rounded-md  "
                 >
@@ -96,6 +118,8 @@ const NavBar = () => {
               </li>
               <li>
                 <Link
+                  smooth={true}
+                  to=""
                   onClick={() => setShowNavBar(false)}
                   className="cursor-pointer hover:text-black hover:bg-white duration-500 text-white w-[129px] h-12 flex justify-center items-center font-popins rounded-md  "
                 >

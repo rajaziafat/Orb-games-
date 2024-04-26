@@ -13,7 +13,7 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 const Teams = () => {
   return (
-    <div className="bg-[#0E101C] py-8 pt-20   relative">
+    <div className="bg-[#0E101C] py-8 pt-20   relative team overflow-hidden">
       <div className="absolute top-0 right-[5%]">
         <TeamSmallGradientCircle />
       </div>
