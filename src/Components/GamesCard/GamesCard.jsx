@@ -17,9 +17,10 @@ const GamesCard = (props) => {
     <>
       <motion.div
         {...fadeInFromLeft(0.3 * props.index + 0.1)}
-        className={`bg-[#1A1B22] h-[513px]  sm:h-max p-5 rounded-xl ${props.className}`}
+        className={`bg-[#1A1B22] cursor-pointer h-[513px]  sm:h-max p-5 rounded-xl ${props.className}`}
+        onClick={OpenModal}
       >
-        <div className="relative h-[295px]" onClick={OpenModal}>
+        <div className="relative h-[295px]">
           <img
             src={`/Images/game${props.index}.png`}
             className="w-full h-full sm:object-cover"

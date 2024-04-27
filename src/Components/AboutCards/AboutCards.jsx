@@ -4,11 +4,11 @@ import { fadeInFromLeft } from "../../utils/helpers/Animation/FadeFromLeftAnimat
 const AboutCards = (props) => {
   return (
     <div
-      className={`flex text-white gap-10 justify-center ${props.direction} md:flex-col-reverse md:items-center`}
+      className={`flex text-white gap-10 relative justify-center ${props.direction} md:flex-col-reverse md:items-center`}
     >
       <motion.div
         {...fadeInFromLeft(0.2 * props.index + 0.2)}
-        className={`w-[382px] h-[350px] sm:h-max sm:w-full ${props.gradientBg} rounded-2xl flex flex-col gap-y-5 px-7 py-9`}
+        className={`w-[382px] h-[350px] sticky top-10 left-0 sm:h-max sm:w-full ${props.gradientBg} rounded-2xl flex flex-col gap-y-5 px-7 py-9`}
       >
         <div className="w-20 h-20  flex justify-center items-center about-card-icon-bg rounded-xl">
           {props.icon}
@@ -18,15 +18,21 @@ const AboutCards = (props) => {
       </motion.div>
       <motion.div
         {...fadeInFromLeft(0.2 * props.index + 0.1)}
-        className=" w-6/12 xl:w-7/12 slg:w-8/12 md:w-full"
+        className=" w-6/12 xl:w-7/12 slg:w-8/12 md:w-full relative"
       >
-        {/* <div className=" w-9/12 h-[500px]"> */}
-        <img
-          loading="lazy"
-          className="w-full h-full object-contain"
-          src={`/Images/about${props.index}.webp`}
-          alt=""
-        />
+        <div className=" w-full h-[500px] sm:h-[340px] relative bg-red-200 rounded-2xl overflow-hidden">
+          {/* <ReactPlayer url={`/Videos/${props.index}.mp4`} autoPlay /> */}
+          <video
+            src={`/Videos/${props.index}.mp4`}
+            className="w-full h-full object-cover absolute  top-0 left-0"
+            controlsList="nodownload"
+            autoPlay
+            muted
+            loop
+            type="video/mp4"
+            playsInline
+          ></video>
+        </div>
       </motion.div>
     </div>
   );

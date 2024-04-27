@@ -6,7 +6,7 @@ import { fadeInFromLeft } from "../../utils/helpers/Animation/FadeFromLeftAnimat
 
 const About = () => {
   return (
-    <div className="bg-[#0E101C] py-8 pt-12 relative about overflow-hidden sm:pt-0">
+    <div className="bg-[#0E101C] py-8 pt-12 relative about md:overflow-hidden sm:pt-0">
       <svg
         viewBox="0 0 386 600"
         className="absolute top-0 left-0 w-[386px] h-[600px] sm:w-[100px] sm:h-[200px] sm:top-[20%] "
@@ -64,7 +64,7 @@ const About = () => {
         >
           Web3 Gaming Unleashed <span className="block"></span> on Orb Games
         </motion.h2>
-        <div className="mt-24 flex gap-24 flex-wrap relative z-30 sm:gap-9 sm:mt-9 ">
+        <div className="mt-24 flex gap-24 flex-wrap relative z-30 sm:gap-9 sm:mt-9 flex-col ">
           <AboutCards
             direction="flex-row-reverse"
             icon={<Hand />}
