@@ -1,14 +1,18 @@
 import { Link } from "react-scroll";
 import { Close, Hamburger } from "../../utils/constants/Icons";
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { fadeInFromLeft } from "../../utils/helpers/Animation/FadeFromLeftAnimation";
+
 const NavBar = () => {
   const [showNavBar, setShowNavBar] = useState(false);
   return (
     <>
-      <nav className="bg-transparent w-full h-32 flex justify-center items-center">
+      <nav className="bg-transparent w-full h-32 flex justify-center items-center sm:h-20">
         <div className="w-10/12 max-w-[1400px] flex justify-between items-center gap-5 xl:w-[95%]">
           <div className="">
-            <img
+            <motion.img
+              {...fadeInFromLeft()}
               loading="lazy"
               src="/Images/Logo.svg"
               alt=""
@@ -17,7 +21,7 @@ const NavBar = () => {
           </div>
           <div className="nav-links-bg rounded-xl py-4 px-3 shadow-md slg:hidden">
             <ul className="flex items-center gap-x-4">
-              <li>
+              <motion.li {...fadeInFromLeft(0.1)}>
                 <Link
                   smooth={true}
                   to="home"
@@ -25,8 +29,8 @@ const NavBar = () => {
                 >
                   Home
                 </Link>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li {...fadeInFromLeft(0.2)}>
                 <Link
                   smooth={true}
                   to="games"
@@ -34,8 +38,8 @@ const NavBar = () => {
                 >
                   Games
                 </Link>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li {...fadeInFromLeft(0.3)}>
                 <Link
                   smooth={true}
                   to="about"
@@ -43,8 +47,8 @@ const NavBar = () => {
                 >
                   About
                 </Link>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li {...fadeInFromLeft(0.3)}>
                 <Link
                   smooth={true}
                   to="team"
@@ -52,18 +56,25 @@ const NavBar = () => {
                 >
                   Team
                 </Link>
-              </li>
+              </motion.li>
             </ul>
           </div>
           <div className="slg:hidden flex">
-            <button className="bg-[#212229] shadow-xl h-12 w-[143px] hover:bg-white duration-500 hover:text-black text-white rounded-md font-semibold">
+            <motion.button
+              {...fadeInFromLeft(0.4)}
+              className="bg-[#212229] shadow-xl h-12 w-[143px] hover:bg-white duration-500 hover:text-black text-white rounded-md font-semibold"
+            >
               Contact Us
-            </button>
+            </motion.button>
           </div>
           <div className="hidden slg:block">
-            <button className="" onClick={() => setShowNavBar((show) => !show)}>
+            <motion.button
+              {...fadeInFromLeft(0.5)}
+              className=""
+              onClick={() => setShowNavBar((show) => !show)}
+            >
               <Hamburger />
-            </button>
+            </motion.button>
           </div>
 
           {/* Mobile Menu */}

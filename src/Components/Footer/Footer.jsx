@@ -1,5 +1,7 @@
 import { Link } from "react-scroll";
 import Helmet from "../Helmet/Helmet";
+import { motion } from "framer-motion";
+import { fadeInFromLeft } from "../../utils/helpers/Animation/FadeFromLeftAnimation";
 
 const Footer = () => {
   return (
@@ -7,16 +9,29 @@ const Footer = () => {
       <footer className="bg-[#0E101C] py-10 ">
         <div className="border-y border-y-[#2E2E31]  flex">
           <Helmet style="flex md:flex-col">
-            <div className="border-r border-r-[#2E2E31] py-10 w-1/2 md:w-full md:border-r-0 md:flex md:flex-col md:items-center ">
-              <img src="Images/Logo.svg" alt="" />
-              <p className="text-[#A1A1A1] font-popins text-lg mt-8  w-10/12 md:text-center sm:w-full">
+            <div className="border-r border-r-[#2E2E31] md:border-b md:border-b-[#2e2e31] py-10 w-1/2 md:w-full md:border-r-0 md:flex md:flex-col md:items-center ">
+              <motion.img
+                {...fadeInFromLeft(0.3)}
+                src="Images/Logo.svg"
+                alt=""
+              />
+              <motion.p
+                {...fadeInFromLeft(0.4)}
+                className="text-[#A1A1A1] font-popins text-lg mt-8  w-10/12 md:text-center sm:w-full"
+              >
                 Fair Web3 gaming, earn through skill, and leverage our framework
                 that rewards every play and innovation
-              </p>
-              <h2 className="font-semibold text-white mt-14 font-popins uppercase ">
+              </motion.p>
+              <motion.h2
+                {...fadeInFromLeft(0.5)}
+                className="font-semibold text-white mt-14 font-popins uppercase sm:mt-8"
+              >
                 Quick Links
-              </h2>
-              <ul className="text-[#A1A1A1] text-lg flex items-center gap-5 mt-7 flex-wrap pr-4 md:text-base md:justify-center">
+              </motion.h2>
+              <motion.ul
+                {...fadeInFromLeft(0.7)}
+                className="text-[#A1A1A1] text-lg flex items-center gap-5 mt-7 flex-wrap pr-4 md:text-base md:justify-center"
+              >
                 <li>
                   <Link
                     smooth={true}
@@ -62,27 +77,39 @@ const Footer = () => {
                     Contact Us
                   </Link>
                 </li>
-              </ul>
+              </motion.ul>
             </div>
-            <div className="py-10 w-1/2 pl-20 flex flex-col gap-y-5 md:w-full  md:pl-0 md:items-center md:text-center">
-              <h3 className="text-white font-popins font-semibold text-2xl">
+            <div className="py-10 w-1/2 pl-20 flex flex-col gap-y-5 md:w-full   md:pl-0 md:items-center md:text-center">
+              <motion.h3
+                {...fadeInFromLeft(0.8)}
+                className="text-white font-popins font-semibold text-2xl"
+              >
                 Join the Play-to-Earn Revolution with Us
-              </h3>
-              <p className="text-[#A1A1A1] font-popins text-lg mt-8  w-10/12">
+              </motion.h3>
+              <motion.p
+                {...fadeInFromLeft(0.9)}
+                className="text-[#A1A1A1] font-popins text-lg mt-8  w-10/12 sm:mt-3 sm:w-full"
+              >
                 Embrace the future of gaming with us and experience the
                 Play-to-Earn revolution firsthand. Join our community today and
                 start earning rewards through skillful play
-              </p>
-              <button className="btn-bg  w-[299px] sm:w-full sm:px-3 mt-4 h-14 rounded-md  text-white font-popins sm:block sm:mx-auto font-medium">
+              </motion.p>
+              <motion.button
+                {...fadeInFromLeft(1)}
+                className="btn-bg  w-[299px] sm:w-full sm:px-3 mt-4 h-14 rounded-md  text-white font-popins sm:block sm:mx-auto font-medium"
+              >
                 <span className="relative z-10">Join the Orbit Games</span>
-              </button>
+              </motion.button>
             </div>
           </Helmet>
         </div>
         <Helmet>
-          <p className="text-[#A1A1A1]  text-xl mt-10 md:text-lg md:text-center">
+          <motion.p
+            {...fadeInFromLeft(1.1)}
+            className="text-[#A1A1A1]  text-xl mt-10 md:text-lg md:text-center sm:text-base"
+          >
             © {new Date().getFullYear()} Orbit Games. All rights reserved.
-          </p>
+          </motion.p>
         </Helmet>
       </footer>
     </>

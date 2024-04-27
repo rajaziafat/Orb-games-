@@ -2,6 +2,9 @@ import { MdArrowOutward } from "react-icons/md";
 import { IoPlay } from "react-icons/io5";
 import { useState } from "react";
 import Modal from "../Modal/Modal";
+import { motion } from "framer-motion";
+import { fadeInFromLeft } from "../../utils/helpers/Animation/FadeFromLeftAnimation";
+
 const GamesCard = (props) => {
   const [open, setOpen] = useState(false);
   const OpenModal = () => {
@@ -12,20 +15,18 @@ const GamesCard = (props) => {
   };
   return (
     <>
-      <div
+      <motion.div
+        {...fadeInFromLeft(0.3 * props.index + 0.1)}
         className={`bg-[#1A1B22] h-[513px]  sm:h-max p-5 rounded-xl ${props.className}`}
       >
-        <div className="relative h-[295px]">
+        <div className="relative h-[295px]" onClick={OpenModal}>
           <img
             src={`/Images/game${props.index}.png`}
             className="w-full h-full sm:object-cover"
             loading="lazy"
             alt=""
           />
-          <button
-            className="w-10 h-10 rounded-md absolute bottom-4 right-4 flex justify-center items-center text-white text-2xl orange-gradient "
-            onClick={OpenModal}
-          >
+          <button className="w-10 h-10 rounded-md absolute bottom-4 right-4 flex justify-center items-center text-white text-2xl orange-gradient ">
             <IoPlay />
           </button>
         </div>
@@ -38,7 +39,7 @@ const GamesCard = (props) => {
         <button className="text-white font-popins text-lg font-semibold flex justify-center gap-x-2 items-center">
           <MdArrowOutward /> Read More
         </button>
-      </div>
+      </motion.div>
       <Modal show={open} closeModal={CloseModal} />
     </>
   );

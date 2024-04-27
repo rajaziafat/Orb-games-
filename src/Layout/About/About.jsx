@@ -1,15 +1,15 @@
+import { motion } from "framer-motion";
 import AboutCards from "../../Components/AboutCards/AboutCards";
 import Helmet from "../../Components/Helmet/Helmet";
 import { Dev, Game, Hand } from "../../utils/constants/Icons";
+import { fadeInFromLeft } from "../../utils/helpers/Animation/FadeFromLeftAnimation";
 
 const About = () => {
   return (
-    <div className="bg-[#0E101C] py-8 pt-12 relative about overflow-hidden">
+    <div className="bg-[#0E101C] py-8 pt-12 relative about overflow-hidden sm:pt-0">
       <svg
-        width="386"
-        height="600"
         viewBox="0 0 386 600"
-        className="absolute -top-32 left-0 "
+        className="absolute top-0 left-0 w-[386px] h-[600px] sm:w-[100px] sm:h-[200px] sm:top-[20%] "
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -58,10 +58,13 @@ const About = () => {
         alt=""
       />
       <Helmet>
-        <h2 className="text-center text-5xl z-20 relative my-12 font-neuro leading-[59px] text-white sm:text-4xl xsm:text-3xl xsm:leading-10">
+        <motion.h2
+          {...fadeInFromLeft(0.2)}
+          className="text-center text-5xl z-20 relative my-12 font-neuro leading-[59px] text-white sm:text-4xl xsm:text-3xl xsm:leading-10"
+        >
           Web3 Gaming Unleashed <span className="block"></span> on Orb Games
-        </h2>
-        <div className="mt-24 flex gap-24 flex-wrap relative z-30 sm:gap-20 sm:mt-20">
+        </motion.h2>
+        <div className="mt-24 flex gap-24 flex-wrap relative z-30 sm:gap-9 sm:mt-9 ">
           <AboutCards
             direction="flex-row-reverse"
             icon={<Hand />}

@@ -60,25 +60,19 @@ const Modal = ({ show, closeModal }) => {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-full  transform overflow-hidden rounded-2xl  p-6 sm:p-2 text-left align-middle shadow-xl transition-all">
-                  <div className="bg-[#1A1B22] relative rounded-lg px-4 py-5">
+                  <div className="bg-[#1A1B22] relative rounded-lg px-4 py-5 sm:py-9 sm:px-2">
                     <span
-                      className="absolute top-3 right-3 text-white text-2xl cursor-pointer"
+                      className="absolute top-3 right-3 text-white text-2xl cursor-pointer sm:top-1 sm:right-1"
                       onClick={closeModal}
                     >
                       <MdOutlineClose />
                     </span>
-                    <div className="flex slg:flex-col-reverse gap-y-4">
-                      <div className="w-7/12 slg:w-full">
-                        {/* <img
-                          src="/Images/video.png"
-                          className="w-11/12"
-                          alt=""
-                        /> */}
+                    <div className="flex slg:flex-col gap-y-4">
+                      <div className="w-7/12 slg:w-full sm:rounded-lg overflow-hidden">
                         <ReactPlayer
-                          //   url={"a.mp4"}
                           url="https://www.youtube.com/watch?v=yUTvaWgK2QU"
                           controls={true}
-                          className="!w-11/12 !h-[350px] slg:!w-full"
+                          className="!w-11/12 !h-[350px] slg:!w-full "
                         />
                         {/* <div className="controls">
                           <button onClick={togglePlay}>
@@ -114,11 +108,11 @@ const Modal = ({ show, closeModal }) => {
                           </a>
                         </div> */}
 
-                        <div className="mt-9 relative w-11/12  sm:mx-auto">
+                        <div className="mt-9 relative w-11/12  sm:mx-auto sm:mt-1">
                           <button className="w-5 h-5 swiper-prev-btn rounded-full text-xl bg-white absolute top-1/2 translate-y-1/2 -left-3 z-10">
                             <IoIosArrowRoundBack />
                           </button>
-                          <button className="w-5 h-5 swiper-next-btn rounded-full text-xl bg-white absolute top-1/2 translate-y-1/2 right-0 z-10">
+                          <button className="w-5 h-5 swiper-next-btn rounded-full text-xl bg-white absolute top-1/2 translate-y-1/2 right-0 z-10 sm:-right-3">
                             <IoIosArrowRoundForward />
                           </button>
                           <button></button>
@@ -172,8 +166,8 @@ const Modal = ({ show, closeModal }) => {
                           </Swiper>
                         </div>
                       </div>
-                      <div className="py-2 text-white w-5/12 pr-5 slg:w-full">
-                        <div className="flex gap-x-3">
+                      <div className="py-2 text-white w-5/12 pr-5 slg:w-full sm:mt-2 sm:text-center  sm:pr-0">
+                        <div className="flex gap-x-3 sm:justify-center">
                           <button className=" bg-[#0E101C] rounded-md p-1 px-2">
                             ACTION
                           </button>
@@ -193,7 +187,7 @@ const Modal = ({ show, closeModal }) => {
                           combat using a diverse cast of heroes and their unique
                           abilities.
                         </p>
-                        <div className="flex gap-x-7 items-center my-5">
+                        <div className="flex gap-x-7 items-center my-5 sm:justify-center">
                           <h3 className="font-medium font-popins text-xl ">
                             Developer:
                           </h3>
@@ -201,7 +195,7 @@ const Modal = ({ show, closeModal }) => {
                             Roit Games
                           </div>
                         </div>
-                        <div className="flex gap-x-7 items-center">
+                        <div className="flex gap-x-7 items-center sm:justify-center">
                           <h3 className="font-medium font-popins text-xl ">
                             Status:
                           </h3>
@@ -209,7 +203,7 @@ const Modal = ({ show, closeModal }) => {
                             Launched
                           </div>
                         </div>
-                        <div className="flex gap-x-4 mt-8 sm:flex-wrap gap-y-4">
+                        <div className="flex gap-x-4 mt-8  gap-y-4 w-full sm:gap-x-2">
                           <button className="h-14 orange-gradient rounded-md w-full">
                             Play Game
                           </button>

@@ -1,10 +1,13 @@
+import { motion } from "framer-motion";
 import Helmet from "../../Components/Helmet/Helmet";
 import { BsTelegram, BsMedium } from "react-icons/bs";
 import { FaXTwitter, FaDiscord } from "react-icons/fa6";
+import { fadeInFromLeft } from "../../utils/helpers/Animation/FadeFromLeftAnimation";
+
 const Social = () => {
   return (
     <>
-      <div className="bg-[#0E101C] sm:hidden py-8 pt-20   relative bg-scoailBg bg-cover h-[400px] flex justify-center items-center">
+      <div className="bg-[#0E101C] sm:hidden py-8 pt-20   relative bg-scoailBg bg-cover h-[400px] flex justify-center items-center ">
         <Helmet style="">
           <div className="w-10/12 md:w-full absolute bottom-[6rem] left-1/2 -translate-x-1/2 flex justify-end items-center md:bottom-[2rem]">
             <div className="flex items-center justify-between w-10/12  gap-10 md:w-6/12">
@@ -61,31 +64,38 @@ const Social = () => {
 
       {/* Section for Mobile */}
       <div className="bg-[#0E101C] pt-10 relative  hidden sm:block ">
-        <div className="bg-scoailMobileBg min-h-[900px] bg-cover relative pt-[12rem] ">
+        <div className="bg-scoailMobileBg min-h-[900px] sm:min-h-[680px] bg-cover relative pt-[12rem] ">
           <div className="flex items-center justify-between w-full flex-col gap-y-8">
-            <h3 className="text-white font-neuro text-3xl sm:text-4xl">
+            <motion.h3
+              {...fadeInFromLeft(0.2)}
+              className="text-white font-neuro text-3xl sm:text-4xl"
+            >
               ORB Games
-            </h3>
-            <div className="flex gap-5 flex-wrap justify-end pr-5">
-              <a
+            </motion.h3>
+            <div className="flex gap-5 flex-wrap justify-end pr-5 sm:justify-center sm:pr-0">
+              <motion.a
+                {...fadeInFromLeft(0.3)}
                 href="#"
                 className="w-12 h-12 rounded-xl bg-[#191E29] grid place-items-center text-2xl text-white hover:bg-white hover:text-[#191e29] duration-500"
               >
                 <BsTelegram />
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                {...fadeInFromLeft(0.4)}
                 href="#"
                 className="w-12 h-12 rounded-xl bg-[#191E29] grid place-items-center text-2xl text-white hover:bg-white hover:text-[#191e29] duration-500"
               >
                 <FaXTwitter />
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                {...fadeInFromLeft(0.5)}
                 href="#"
                 className="w-12 h-12 rounded-xl bg-[#191E29] grid place-items-center text-2xl text-white hover:bg-white hover:text-[#191e29] duration-500"
               >
                 <BsMedium />
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                {...fadeInFromLeft(0.6)}
                 href="#"
                 className="w-12 h-12 rounded-xl bg-[#191E29] grid place-items-center text-2xl text-white hover:bg-white hover:text-[#191e29] duration-500 group"
               >
@@ -101,16 +111,17 @@ const Social = () => {
                     className="group-hover:fill-[#191E29] duration-500 fill-white"
                   />
                 </svg>
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                {...fadeInFromLeft(0.7)}
                 href="#"
                 className="w-12 h-12 rounded-xl bg-[#191E29] grid place-items-center text-2xl text-white hover:bg-white hover:text-[#191e29] duration-500"
               >
                 <FaDiscord />
-              </a>
+              </motion.a>
             </div>
           </div>
-          <img
+          <motion.img
             src="Images/girl.png"
             className="absolute bottom-0 left-0 w-full"
             alt=""
