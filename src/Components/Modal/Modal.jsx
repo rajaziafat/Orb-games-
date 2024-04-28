@@ -116,10 +116,10 @@ const Modal = ({ show, closeModal, videoUrl }) => {
                         </div> */}
 
                         <div className="mt-9 relative w-[90%] mx-auto  sm:mx-auto sm:mt-1">
-                          <button className="w-5 h-5 swiper-prev-btn rounded-full text-xl bg-white absolute top-1/2 translate-y-1/2 -left-3 z-20">
+                          <button className="w-5 h-5 swiper-prev-btn rounded-full text-xl bg-white absolute top-1/2 translate-y-1/2 -left-3 z-20 sm:top-[45%]">
                             <IoIosArrowRoundBack />
                           </button>
-                          <button className="w-5 h-5 swiper-next-btn rounded-full text-xl bg-white absolute top-1/2 translate-y-1/2 right-0 z-20 sm:-right-3">
+                          <button className="w-5 h-5 swiper-next-btn rounded-full text-xl bg-white absolute top-1/2 translate-y-1/2 right-0 z-20 sm:top-[45%] sm:-right-3">
                             <IoIosArrowRoundForward />
                           </button>
                           <button></button>
