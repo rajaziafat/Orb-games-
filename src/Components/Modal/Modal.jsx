@@ -80,7 +80,7 @@ const Modal = ({ show, closeModal, videoUrl }) => {
                           // url="https://www.youtube.com/watch?v=yUTvaWgK2QU"
                           url={playvideo}
                           controls={true}
-                          className="!w-11/12 !h-[350px] slg:!w-full "
+                          className="!w-11/12 !h-[350px] slg:!w-full !rounded-xl "
                         />
                         {/* <div className="controls">
                           <button onClick={togglePlay}>
@@ -116,11 +116,11 @@ const Modal = ({ show, closeModal, videoUrl }) => {
                           </a>
                         </div> */}
 
-                        <div className="mt-9 relative w-[90%]   sm:mx-auto sm:mt-1">
-                          <button className="w-5 h-5 swiper-prev-btn rounded-full text-xl bg-white absolute top-[45%] translate-y-[-25%] sm:-translate-y-1/2 -left-3 z-30 sm:top-[45%]">
+                        <div className="mt-9 relative w-[90%]   sm:mx-auto sm:w-[95%] sm:mt-5 pl-3">
+                          <button className="w-5 h-5 swiper-prev-btn rounded-full text-xl bg-white absolute top-[45%] translate-y-[-25%] sm:-translate-y-1/2 left-1 z-30 sm:top-[45%]">
                             <IoIosArrowRoundBack />
                           </button>
-                          <button className="w-5 h-5 swiper-next-btn rounded-full text-xl bg-white absolute top-[45%] translate-y-[-25%] sm:-translate-y-1/2 right-0 z-30 sm:top-[45%] sm:-right-3">
+                          <button className="w-5 h-5 swiper-next-btn rounded-full text-xl bg-white absolute top-[45%] translate-y-[-25%] sm:-translate-y-1/2 -right-3 z-30 sm:top-[45%] sm:-right-2">
                             <IoIosArrowRoundForward />
                           </button>
 
