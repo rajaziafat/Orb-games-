@@ -7,8 +7,10 @@ import { fadeInFromLeft } from "../../utils/helpers/Animation/FadeFromLeftAnimat
 
 const GamesCard = (props) => {
   const [open, setOpen] = useState(false);
+  const [videoUrl, setVideoUrl] = useState(`/Videos/1.mp4`);
   const OpenModal = () => {
     setOpen(true);
+    setVideoUrl(`/Videos/${props.index}.mp4`);
   };
   const CloseModal = () => {
     setOpen(false);
@@ -21,12 +23,21 @@ const GamesCard = (props) => {
         onClick={OpenModal}
       >
         <div className="relative h-[295px]">
-          <img
-            src={`/Images/game${props.index}.png`}
+          <video
+            disablePictureInPicture="true"
+            src={`/Videos/${props.index}.mp4`}
+            muted
+            autoPlay
+            playsInline
+            controlsList="nodownload"
+            className="absolute top-0 left-0 w-full h-full object-cover rounded-xl "
+          ></video>
+          {/* <img
+            src={`/Video/${props.index}.mp4`}
             className="w-full h-full sm:object-cover"
             loading="lazy"
             alt=""
-          />
+          /> */}
           <button className="w-10 h-10 rounded-md absolute bottom-4 right-4 flex justify-center items-center text-white text-2xl orange-gradient ">
             <IoPlay />
           </button>
@@ -41,7 +52,7 @@ const GamesCard = (props) => {
           <MdArrowOutward /> Read More
         </button>
       </motion.div>
-      <Modal show={open} closeModal={CloseModal} />
+      <Modal show={open} closeModal={CloseModal} videoUrl={videoUrl} />
     </>
   );
 };

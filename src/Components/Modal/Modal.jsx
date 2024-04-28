@@ -14,10 +14,11 @@ import { Fragment, useState } from "react";
 
 import ReactPlayer from "react-player";
 import { useRef } from "react";
-const Modal = ({ show, closeModal }) => {
+const Modal = ({ show, closeModal, videoUrl }) => {
   const [playing, setPlaying] = useState(false);
   const [volume, setVolume] = useState(0.8);
   const [played, setPlayed] = useState(0);
+  const [playvideo, setPalyVideo] = useState(videoUrl || `/Videos/1.mp4`);
   const playerRef = useRef();
 
   const togglePlay = () => setPlaying(!playing);
@@ -31,6 +32,11 @@ const Modal = ({ show, closeModal }) => {
         document.exitFullscreen();
       }
     }
+  };
+
+  //Slecting the Video
+  const selectVideo = (id) => {
+    setPalyVideo(`/Videos/${id}.mp4`);
   };
   return (
     <>
@@ -70,7 +76,8 @@ const Modal = ({ show, closeModal }) => {
                     <div className="flex slg:flex-col gap-y-4">
                       <div className="w-7/12 slg:w-full sm:rounded-lg overflow-hidden">
                         <ReactPlayer
-                          url="https://www.youtube.com/watch?v=yUTvaWgK2QU"
+                          // url="https://www.youtube.com/watch?v=yUTvaWgK2QU"
+                          url={playvideo}
                           controls={true}
                           className="!w-11/12 !h-[350px] slg:!w-full "
                         />
@@ -108,7 +115,7 @@ const Modal = ({ show, closeModal }) => {
                           </a>
                         </div> */}
 
-                        <div className="mt-9 relative w-11/12  sm:mx-auto sm:mt-1">
+                        <div className="mt-9 relative w-[90%] mx-auto  sm:mx-auto sm:mt-1">
                           <button className="w-5 h-5 swiper-prev-btn rounded-full text-xl bg-white absolute top-1/2 translate-y-1/2 -left-3 z-10">
                             <IoIosArrowRoundBack />
                           </button>
@@ -139,29 +146,29 @@ const Modal = ({ show, closeModal }) => {
                               600: { slidesPerView: 4 },
                             }}
                           >
-                            <SwiperSlide>
-                              <ModalVideoCard img={4} />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                              <ModalVideoCard img={2} />
-                            </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide onClick={() => selectVideo(3)}>
                               <ModalVideoCard img={3} />
                             </SwiperSlide>
-                            <SwiperSlide>
-                              <ModalVideoCard img={1} />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                              <ModalVideoCard img={4} />
-                            </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide onClick={() => selectVideo(2)}>
                               <ModalVideoCard img={2} />
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide onClick={() => selectVideo(1)}>
+                              <ModalVideoCard img={1} />
+                            </SwiperSlide>
+                            <SwiperSlide onClick={() => selectVideo(3)}>
                               <ModalVideoCard img={3} />
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide onClick={() => selectVideo(2)}>
+                              <ModalVideoCard img={2} />
+                            </SwiperSlide>
+                            <SwiperSlide onClick={() => selectVideo(1)}>
                               <ModalVideoCard img={1} />
+                            </SwiperSlide>
+                            <SwiperSlide onClick={() => selectVideo(3)}>
+                              <ModalVideoCard img={3} />
+                            </SwiperSlide>
+                            <SwiperSlide onClick={() => selectVideo(2)}>
+                              <ModalVideoCard img={2} />
                             </SwiperSlide>
                           </Swiper>
                         </div>
@@ -226,8 +233,15 @@ const Modal = ({ show, closeModal }) => {
 
 const ModalVideoCard = (props) => {
   return (
-    <div>
-      <img src={`/Images/Modal${props.img}.png`} alt="" />
+    <div className="w-[160px] h-[81px] relative cursor-pointer">
+      <video
+        src={`/Videos/${props.img}.mp4`}
+        disablePictureInPicture="true"
+        className="absolute top-0 left-0 w-full h-full object-cover rounded-md"
+        playsInline
+        controlsList="nodownload"
+      ></video>
+      {/* <img src={`/Images/Modal${props.img}.png`} alt="" /> */}
     </div>
   );
 };

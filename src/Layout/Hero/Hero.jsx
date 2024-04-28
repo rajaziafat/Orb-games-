@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { fadeInFromLeft } from "../../utils/helpers/Animation/FadeFromLeftAnimation";
 const Hero = () => {
   return (
-    <div className="bg-heroBg home sm:bg-heromobileBg bg-cover bg-no-repeat min-h-screen h-[1277px] bg-center sm:h-[860px]">
+    <div className="bg-heroBg home sm:bg-heromobileBg bg-cover bg-no-repeat  h-[1277px] bg-center sm:h-[900px]  md:h-[1500px]">
       <NavBar />
       <div className="pt-24 sm:pt-14">
         <Helmet>
@@ -20,7 +20,7 @@ const Hero = () => {
           </motion.h3>
           <motion.h1
             {...fadeInFromLeft(0.6)}
-            className="text-7xl text-white my-7 font-neuro sm:text-center sm:text-6xl sm:leading-[100px] xsm:text-5xl xsm:leading-[60px]"
+            className="text-7xl text-white my-7  font-neuro sm:text-center sm:text-6xl sm:leading-[70px] xsm:text-5xl xsm:leading-[60px]"
           >
             Play, <br className="sm:hidden" /> Prosper, Build
           </motion.h1>
