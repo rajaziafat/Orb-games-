@@ -145,28 +145,28 @@ const Modal = ({ show, closeModal, videoUrl }) => {
                               600: { slidesPerView: 4 },
                             }}
                           >
-                            <SwiperSlide onClick={() => selectVideo(3)}>
+                            <SwiperSlide>
                               <ModalVideoCard img={3} />
                             </SwiperSlide>
-                            <SwiperSlide onClick={() => selectVideo(2)}>
+                            <SwiperSlide>
                               <ModalVideoCard img={2} />
                             </SwiperSlide>
-                            <SwiperSlide onClick={() => selectVideo(1)}>
+                            <SwiperSlide>
                               <ModalVideoCard img={1} />
                             </SwiperSlide>
-                            <SwiperSlide onClick={() => selectVideo(3)}>
+                            <SwiperSlide>
                               <ModalVideoCard img={3} />
                             </SwiperSlide>
-                            <SwiperSlide onClick={() => selectVideo(2)}>
+                            <SwiperSlide>
                               <ModalVideoCard img={2} />
                             </SwiperSlide>
-                            <SwiperSlide onClick={() => selectVideo(1)}>
+                            <SwiperSlide>
                               <ModalVideoCard img={1} />
                             </SwiperSlide>
-                            <SwiperSlide onClick={() => selectVideo(3)}>
+                            <SwiperSlide>
                               <ModalVideoCard img={3} />
                             </SwiperSlide>
-                            <SwiperSlide onClick={() => selectVideo(2)}>
+                            <SwiperSlide>
                               <ModalVideoCard img={2} />
                             </SwiperSlide>
                           </Swiper>
