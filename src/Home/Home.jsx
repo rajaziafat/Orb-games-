@@ -1,4 +1,4 @@
-import { SwiperSlide } from "swiper/react";
+import { SwiperSlide, Swiper } from "swiper/react";
 import Footer from "../Components/Footer/Footer";
 import About from "../Layout/About/About";
 import Games from "../Layout/Games/Games";
@@ -6,7 +6,6 @@ import Hero from "../Layout/Hero/Hero";
 import Social from "../Layout/Social/Social";
 import Teams from "../Layout/Teams/Teams";
 import { Navigation } from "swiper/modules";
-import Swiper from "swiper";
 const Home = () => {
   return (
     <>
