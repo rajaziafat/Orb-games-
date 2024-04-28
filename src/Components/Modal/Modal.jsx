@@ -116,7 +116,7 @@ const Modal = ({ show, closeModal, videoUrl }) => {
                           </a>
                         </div> */}
 
-                        <div className="mt-9 relative w-[90%] mx-auto  sm:mx-auto sm:mt-1">
+                        <div className="mt-9 relative w-[90%]   sm:mx-auto sm:mt-1">
                           <button className="w-5 h-5 swiper-prev-btn rounded-full text-xl bg-white absolute top-[45%] translate-y-[-25%] sm:-translate-y-1/2 -left-3 z-30 sm:top-[45%]">
                             <IoIosArrowRoundBack />
                           </button>
