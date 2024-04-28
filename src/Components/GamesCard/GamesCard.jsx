@@ -20,7 +20,7 @@ const GamesCard = (props) => {
       <motion.div
         {...fadeInFromLeft(0.3 * props.index + 0.1)}
         className={`bg-[#1A1B22] cursor-pointer h-[513px]  sm:h-max p-5 rounded-xl ${props.className}`}
-        onClick={props.onClick}
+        onClick={OpenModal}
       >
         <div className="relative h-[295px]">
           <video
@@ -52,7 +52,7 @@ const GamesCard = (props) => {
           <MdArrowOutward /> Read More
         </button>
       </motion.div>
-      {/* <Modal show={open} closeModal={CloseModal} videoUrl={videoUrl} /> */}
+      <Modal show={open} closeModal={CloseModal} videoUrl={videoUrl} />
     </>
   );
 };
