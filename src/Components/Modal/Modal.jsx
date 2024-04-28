@@ -132,7 +132,7 @@ const Modal = ({ show, closeModal, videoUrl }) => {
                             slidesPerView={4}
                             allowSlideNext={true}
                             allowSlidePrev={true}
-                            loop={true}
+                            rewind={true}
                             navigation={{
                               nextEl: ".swiper-next-btn",
                               prevEl: ".swiper-prev-btn",
