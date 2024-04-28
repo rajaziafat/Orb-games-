@@ -11,10 +11,9 @@ import { Autoplay, Navigation } from "swiper/modules";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
-
 import ReactPlayer from "react-player";
 import { useRef } from "react";
-const Modal = ({ show, closeModal, videoUrl }) => {
+const Modal = ({ show, closeModal, videoUrl, onClick }) => {
   const [playing, setPlaying] = useState(false);
   const [volume, setVolume] = useState(0.8);
   const [played, setPlayed] = useState(0);
@@ -34,6 +33,7 @@ const Modal = ({ show, closeModal, videoUrl }) => {
     }
   };
 
+  // SwiperCore.use([Navigation]);
   //Slecting the Video
   const selectVideo = (id) => {
     setPalyVideo(`/Videos/${id}.mp4`);

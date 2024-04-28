@@ -2,8 +2,19 @@ import { motion } from "framer-motion";
 import GamesCard from "../../Components/GamesCard/GamesCard";
 import Helmet from "../../Components/Helmet/Helmet";
 import { fadeInFromLeft } from "../../utils/helpers/Animation/FadeFromLeftAnimation";
+import { useState } from "react";
+import Modal from "../../Components/Modal/Modal";
 
 const Games = () => {
+  const [open, setOpen] = useState(false);
+  const [videoUrl, setVideoUrl] = useState(`/Videos/1.mp4`);
+  const OpenModal = () => {
+    setOpen(true);
+    setVideoUrl(`/Videos/1.mp4`);
+  };
+  const CloseModal = () => {
+    setOpen(false);
+  };
   return (
     <>
       <div className="pt-16 pb-10 bg-[#0E101C]  -translate-y-1 relative games sm:pt-12">
@@ -24,16 +35,19 @@ const Games = () => {
           </div>
           <div className="flex mt-9 gap-8 xl:gap-10 sm:gap-7 flex-wrap justify-center w-full">
             <GamesCard
+              onClick={OpenModal}
               index={1}
               className="w-[488px] sm:w-full lg:w-[349px]"
               description="Fair Web3 gaming, earn through skill, and leverage our framework that rewards every play and innovation..."
             />
             <GamesCard
+              onClick={OpenModal}
               index={2}
               className="w-[349px] md:w-[488px] sm:w-full"
               description="Fair Web3 gaming, earn through skill, and leverage our framework that..."
             />
             <GamesCard
+              onClick={OpenModal}
               index={3}
               className="w-[349px] md:w-[488px] sm:w-full"
               description="Fair Web3 gaming, earn through skill, and leverage our framework that..."
@@ -45,6 +59,8 @@ const Games = () => {
         </Helmet>
         <div className="absolute bottom-0 left-0 bg-[#0E101C]  w-full h-2 translate-y-1"></div>
       </div>
+
+      <Modal show={open} closeModal={CloseModal} videoUrl={videoUrl} />
     </>
   );
 };
