@@ -116,10 +116,10 @@ const Modal = ({ show, closeModal, videoUrl }) => {
                         </div> */}
 
                         <div className="mt-9 relative w-[90%] mx-auto  sm:mx-auto sm:mt-1">
-                          <button className="w-5 h-5 swiper-prev-btn rounded-full text-xl bg-white absolute top-1/2 translate-y-1/2 -left-3 z-10">
+                          <button className="w-5 h-5 swiper-prev-btn-custom rounded-full text-xl bg-white absolute top-1/2 translate-y-1/2 -left-3 z-10">
                             <IoIosArrowRoundBack />
                           </button>
-                          <button className="w-5 h-5 swiper-next-btn rounded-full text-xl bg-white absolute top-1/2 translate-y-1/2 right-0 z-10 sm:-right-3">
+                          <button className="w-5 h-5 swiper-next-btn-custom rounded-full text-xl bg-white absolute top-1/2 translate-y-1/2 right-0 z-10 sm:-right-3">
                             <IoIosArrowRoundForward />
                           </button>
                           <button></button>
@@ -134,8 +134,8 @@ const Modal = ({ show, closeModal, videoUrl }) => {
                             allowSlidePrev={true}
                             rewind={true}
                             navigation={{
-                              nextEl: ".swiper-next-btn",
-                              prevEl: ".swiper-prev-btn",
+                              nextEl: ".swiper-next-btn-custom",
+                              prevEl: ".swiper-prev-btn-custom",
                             }}
                             spaceBetween={30}
                             modules={[Pagination, Autoplay, Navigation]}
