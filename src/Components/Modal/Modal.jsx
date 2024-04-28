@@ -233,7 +233,7 @@ const Modal = ({ show, closeModal, videoUrl }) => {
 
 const ModalVideoCard = (props) => {
   return (
-    <div className="w-[160px] h-[81px] relative cursor-pointer">
+    <div className="w-[160px] h-[81px] relative cursor-pointer z-10">
       <video
         src={`/Videos/${props.img}.mp4`}
         disablePictureInPicture="true"
