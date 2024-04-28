@@ -116,10 +116,10 @@ const Modal = ({ show, closeModal, videoUrl }) => {
                         </div> */}
 
                         <div className="mt-9 relative w-[90%] mx-auto  sm:mx-auto sm:mt-1">
-                          <button className="w-5 h-5 swiper-prev-btn-custom rounded-full text-xl bg-white absolute top-1/2 translate-y-1/2 -left-3 z-10">
+                          <button className="w-5 h-5 swiper-prev-btn-custom rounded-full text-xl bg-white absolute top-1/2 translate-y-1/2 -left-3 z-30">
                             <IoIosArrowRoundBack />
                           </button>
-                          <button className="w-5 h-5 swiper-next-btn-custom rounded-full text-xl bg-white absolute top-1/2 translate-y-1/2 right-0 z-10 sm:-right-3">
+                          <button className="w-5 h-5 swiper-next-btn-custom rounded-full text-xl bg-white absolute top-1/2 translate-y-1/2 right-0 z-30 sm:-right-3">
                             <IoIosArrowRoundForward />
                           </button>
                           <button></button>
@@ -233,7 +233,7 @@ const Modal = ({ show, closeModal, videoUrl }) => {
 
 const ModalVideoCard = (props) => {
   return (
-    <div className="w-[160px] h-[81px] relative cursor-pointer">
+    <div className="w-[160px] h-[81px] relative cursor-pointer z-10">
       {/* <video
         src={`/Videos/${props.img}.mp4`}
         disablePictureInPicture="true"
