@@ -41,7 +41,7 @@ const Modal = ({ show, closeModal, videoUrl }) => {
   return (
     <>
       <Transition appear show={show} as={Fragment}>
-        <Dialog as="div" className="relative z-30" onClose={closeModal}>
+        <Dialog as="div" className="relative z-20" onClose={closeModal}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -116,10 +116,10 @@ const Modal = ({ show, closeModal, videoUrl }) => {
                         </div> */}
 
                         <div className="mt-9 relative w-[90%] mx-auto  sm:mx-auto sm:mt-1">
-                          <button className="w-5 h-5 swiper-prev-btn rounded-full text-xl bg-white absolute top-1/2 translate-y-1/2 -left-3 z-30 sm:top-[45%]">
+                          <button className="w-5 h-5 swiper-prev-btn rounded-full text-xl bg-white absolute top-1/2 translate-y-1/2 -left-3 z-10">
                             <IoIosArrowRoundBack />
                           </button>
-                          <button className="w-5 h-5 swiper-next-btn rounded-full text-xl bg-white absolute top-1/2 translate-y-1/2 right-0 z-30 sm:top-[45%] sm:-right-3">
+                          <button className="w-5 h-5 swiper-next-btn rounded-full text-xl bg-white absolute top-1/2 translate-y-1/2 right-0 z-10 sm:-right-3">
                             <IoIosArrowRoundForward />
                           </button>
                           <button></button>
@@ -128,6 +128,7 @@ const Modal = ({ show, closeModal, videoUrl }) => {
                               el: ".swiper-custom-pagination",
                               clickable: true,
                             }}
+                            // autoplay={true}
                             slidesPerView={4}
                             allowSlideNext={true}
                             allowSlidePrev={true}
@@ -145,28 +146,28 @@ const Modal = ({ show, closeModal, videoUrl }) => {
                               600: { slidesPerView: 4 },
                             }}
                           >
-                            <SwiperSlide>
+                            <SwiperSlide onClick={() => selectVideo(3)}>
                               <ModalVideoCard img={3} />
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide onClick={() => selectVideo(2)}>
                               <ModalVideoCard img={2} />
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide onClick={() => selectVideo(1)}>
                               <ModalVideoCard img={1} />
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide onClick={() => selectVideo(3)}>
                               <ModalVideoCard img={3} />
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide onClick={() => selectVideo(2)}>
                               <ModalVideoCard img={2} />
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide onClick={() => selectVideo(1)}>
                               <ModalVideoCard img={1} />
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide onClick={() => selectVideo(3)}>
                               <ModalVideoCard img={3} />
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide onClick={() => selectVideo(2)}>
                               <ModalVideoCard img={2} />
                             </SwiperSlide>
                           </Swiper>
@@ -232,7 +233,7 @@ const Modal = ({ show, closeModal, videoUrl }) => {
 
 const ModalVideoCard = (props) => {
   return (
-    <div className="w-[160px] h-[81px] relative cursor-pointer z-10">
+    <div className="w-[160px] h-[81px] relative cursor-pointer">
       <video
         src={`/Videos/${props.img}.mp4`}
         disablePictureInPicture="true"
