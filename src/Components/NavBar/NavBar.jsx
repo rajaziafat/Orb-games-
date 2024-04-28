@@ -8,7 +8,7 @@ const NavBar = () => {
   const [showNavBar, setShowNavBar] = useState(false);
   return (
     <>
-      <nav className="bg-transparent w-full h-32 flex justify-center items-center sm:h-20">
+      <nav className="bg-transparent w-full h-32 flex justify-center items-center sm:h-20 ">
         <div className="w-10/12 max-w-[1400px] flex justify-between items-center gap-5 xl:w-[95%]">
           <div className="">
             <motion.img
