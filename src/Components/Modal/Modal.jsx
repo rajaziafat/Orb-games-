@@ -41,7 +41,7 @@ const Modal = ({ show, closeModal, videoUrl }) => {
   return (
     <>
       <Transition appear show={show} as={Fragment}>
-        <Dialog as="div" className="relative z-20" onClose={closeModal}>
+        <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -234,14 +234,14 @@ const Modal = ({ show, closeModal, videoUrl }) => {
 const ModalVideoCard = (props) => {
   return (
     <div className="w-[160px] h-[81px] relative cursor-pointer">
-      <video
+      {/* <video
         src={`/Videos/${props.img}.mp4`}
         disablePictureInPicture="true"
         className="absolute top-0 left-0 w-full h-full object-cover rounded-md"
         playsInline
         controlsList="nodownload"
-      ></video>
-      {/* <img src={`/Images/Modal${props.img}.png`} alt="" /> */}
+      ></video> */}
+      <img src={`/Images/Modal${props.img}.png`} alt="" />
     </div>
   );
 };
