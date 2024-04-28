@@ -124,11 +124,6 @@ const Modal = ({ show, closeModal, videoUrl }) => {
                           </button>
                           <button></button>
                           <Swiper
-                            pagination={{
-                              el: ".swiper-custom-pagination",
-                              clickable: true,
-                            }}
-                            // autoplay={true}
                             slidesPerView={4}
                             allowSlideNext={true}
                             allowSlidePrev={true}
@@ -138,7 +133,7 @@ const Modal = ({ show, closeModal, videoUrl }) => {
                               prevEl: ".swiper-button-prev",
                             }}
                             spaceBetween={30}
-                            modules={[Pagination, Autoplay, Navigation]}
+                            modules={[Autoplay, Navigation]}
                             className="mySwiper w-full h-full"
                             breakpoints={{
                               0: { slidesPerView: "auto" },
