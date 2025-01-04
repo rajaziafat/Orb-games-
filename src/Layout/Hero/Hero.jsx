@@ -10,19 +10,17 @@ const Hero = () => {
         <Helmet>
           <motion.h3
             {...fadeInFromLeft(0.4)}
-            className="text-white text-xl w-max sm:w-full  font-neuro grid grid-flow-col items-center sm:text-sm"
+            className="text-white text-xl w-8/12 sm:w-full  font-neuro grid grid-flow-col items-center sm:text-sm"
           >
-            Web3 Gaming in Orbit
-            <span className="orange-gradient w-14 h-14 sm:w-10 sm:h-10 sm:text-base sm:text-center flex justify-center items-center rounded-full mx-2 sm:-mx-5">
-              ON
-            </span>
-            Orb
+            A gaming ecosystem built for players, with immersive gameplay and
+            asset values directly tied to the in-game economy.
           </motion.h3>
           <motion.h1
             {...fadeInFromLeft(0.6)}
             className="text-7xl text-white my-7  font-neuro sm:text-center sm:text-6xl sm:leading-[70px] xsm:text-5xl xsm:leading-[60px]"
           >
-            Play, <br className="sm:hidden" /> Prosper, Build
+            The Game Economy, Reinvented
+            {/* Play, <br className="sm:hidden" /> Prosper, Build */}
           </motion.h1>
           <motion.button
             {...fadeInFromLeft(0.8)}

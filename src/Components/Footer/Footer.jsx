@@ -84,21 +84,21 @@ const Footer = () => {
                 {...fadeInFromLeft(0.8)}
                 className="text-white font-popins font-semibold text-2xl"
               >
-                Join the Play-to-Earn Revolution with Us
+                Own the Game, Own the Value
               </motion.h3>
               <motion.p
                 {...fadeInFromLeft(0.9)}
                 className="text-[#A1A1A1] font-popins text-lg mt-8  w-10/12 sm:mt-3 sm:w-full"
               >
-                Embrace the future of gaming with us and experience the
-                Play-to-Earn revolution firsthand. Join our community today and
-                start earning rewards through skillful play
+                Step into a new era of gaming where your skills and assets
+                matter. Play, earn, and thrive in a sustainable economy built
+                for gamers.
               </motion.p>
               <motion.button
                 {...fadeInFromLeft(1)}
                 className="btn-bg  w-[299px] sm:w-full sm:px-3 mt-4 h-14 rounded-md  text-white font-popins sm:block sm:mx-auto font-medium"
               >
-                <span className="relative z-10">Join the Orbit Games</span>
+                <span className="relative z-10">Join Epoch Games</span>
               </motion.button>
             </div>
           </Helmet>
@@ -108,7 +108,7 @@ const Footer = () => {
             {...fadeInFromLeft(1.1)}
             className="text-[#A1A1A1]  text-xl mt-10 md:text-lg md:text-center sm:text-base"
           >
-            © {new Date().getFullYear()} Orbit Games. All rights reserved.
+            © {new Date().getFullYear()} Epoch Games. All rights reserved.
           </motion.p>
         </Helmet>
       </footer>

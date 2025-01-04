@@ -14,9 +14,9 @@ const NavBar = () => {
             <motion.img
               {...fadeInFromLeft()}
               loading="lazy"
-              src="/Images/Logo.svg"
+              src="/Images/Logo.png"
               alt=""
-              className="sm:w-32"
+              className="sm:w-32 w-52"
             />
           </div>
           <div className="nav-links-bg rounded-xl py-4 px-3 shadow-md slg:hidden">
@@ -85,7 +85,7 @@ const NavBar = () => {
           >
             <div className="flex justify-between px-5 py-4 pt-12 items-center w-full">
               <div className="">
-                <img loading="lazy" src="/Images/Logo.svg" alt="" />
+                <img loading="lazy" src="/Images/logo.png" alt="" />
               </div>
               <div className="">
                 <button

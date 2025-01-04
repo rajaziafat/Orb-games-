@@ -38,24 +38,46 @@ const Teams = () => {
             parentTilt="rotate-[4deg]"
             imgTilt="-rotate-[2deg]"
             img="Images/team1.png"
-            title="Alex Nguyen - CTO"
+            title="Kai Hatherley - COO
+"
           />
           <TeamsCard
             className=""
             parentTilt="-rotate-[4deg]"
             imgTilt="rotate-[2deg]"
             img="Images/team2.png"
-            title="Sarah Chen - CEO"
+            title="Daniel Jensen - CEO"
           />
           <TeamsCard
             className=""
             parentTilt="-rotate-[4deg]"
             imgTilt="rotate-[2deg]"
             img="Images/team3.png"
-            title="Michael DOE - CFO"
+            title="Christopher (Lav) Taylor  Head of Game Development"
+          />
+          <TeamsCard
+            className=""
+            parentTilt="-rotate-[4deg]"
+            imgTilt="rotate-[2deg]"
+            img="Images/team3.png"
+            title="Artem Zaitsev CTO"
+          />
+          <TeamsCard
+            className=""
+            parentTilt="-rotate-[4deg]"
+            imgTilt="rotate-[2deg]"
+            img="Images/team3.png"
+            title="Marek Benda - CMO"
+          />
+          <TeamsCard
+            className=""
+            parentTilt="-rotate-[4deg]"
+            imgTilt="rotate-[2deg]"
+            img="Images/team3.png"
+            title="Jung Woong Park Strategic Advisor"
           />
         </motion.div>
-        <motion.div
+        {/* <motion.div
           {...fadeInFromLeft(0.6)}
           className="mt-5 relative z-10 flex justify-center  gap-16 slg:flex-wrap sm:hidden"
         >
@@ -80,7 +102,7 @@ const Teams = () => {
             img="Images/team3.png"
             title="Michael DOE - CFO"
           />
-        </motion.div>
+        </motion.div> */}
         <div className=" hidden sm:block">
           <Swiper
             pagination={{
@@ -116,7 +138,7 @@ const Teams = () => {
                 />
               </div>
             </SwiperSlide>
-            <SwiperSlide className="flex justify-center items-center text-center">
+            {/* <SwiperSlide className="flex justify-center items-center text-center">
               {" "}
               <div className="mt-5 relative z-10 flex justify-center  gap-16 slg:flex-wrap ">
                 <TeamsCard
@@ -167,7 +189,7 @@ const Teams = () => {
                   title="Michael DOE - CFO"
                 />
               </div>
-            </SwiperSlide>
+            </SwiperSlide> */}
           </Swiper>
           <div className="swiper-custom-pagination  flex justify-center mt-10"></div>
         </div>

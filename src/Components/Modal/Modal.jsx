@@ -14,7 +14,15 @@ import { Fragment, useState } from "react";
 
 import ReactPlayer from "react-player";
 import { useRef } from "react";
-const Modal = ({ show, closeModal, videoUrl }) => {
+const Modal = ({
+  show,
+  closeModal,
+  videoUrl,
+  status,
+  btnTitle,
+  description,
+  tags,
+}) => {
   const [playing, setPlaying] = useState(false);
   const [volume, setVolume] = useState(0.8);
   const [played, setPlayed] = useState(0);
@@ -171,44 +179,43 @@ const Modal = ({ show, closeModal, videoUrl }) => {
                       </div>
                       <div className="py-2 text-white w-5/12 pr-5 slg:w-full sm:mt-2 sm:text-center  sm:pr-0">
                         <div className="flex gap-x-3 sm:justify-center">
-                          <button className=" bg-[#0E101C] rounded-md p-1 px-2">
+                          {tags.map((tag, index) => (
+                            <button
+                              key={index}
+                              className="bg-[#0E101C] rounded-md p-1 px-2"
+                            >
+                              {tag}
+                            </button>
+                          ))}
+                          {/* <button className=" bg-[#0E101C] rounded-md p-1 px-2">
                             ACTION
-                          </button>
-                          <button className=" bg-[#0E101C] rounded-md p-1 px-2">
-                            FPS
-                          </button>
-                          <button className=" bg-[#0E101C] rounded-md p-1 px-2">
-                            TACTICAL
-                          </button>
+                          </button> */}
                         </div>
                         <h1 className="font-neuro  text-6xl mt-4 md:text-5xl sm:text-4xl">
                           Valorant
                         </h1>
                         <p className="font-popins text-[#A1A1A1] text-lg my-8">
-                          Valorant is a fast-paced, tactical first-person
-                          shooter where players engage in strategic team-based
-                          combat using a diverse cast of heroes and their unique
-                          abilities.
+                          {description}
                         </p>
-                        <div className="flex gap-x-7 items-center my-5 sm:justify-center">
+                        {/* <div className="flex gap-x-7 items-center my-5 sm:justify-center">
                           <h3 className="font-medium font-popins text-xl ">
                             Developer:
                           </h3>
                           <div className="orange-gradient rounded-md px-2 w-max text-sm py-1">
                             Roit Games
                           </div>
-                        </div>
+                        </div> */}
                         <div className="flex gap-x-7 items-center sm:justify-center">
                           <h3 className="font-medium font-popins text-xl ">
                             Status:
                           </h3>
                           <div className="bg-[#0E101C] rounded-md px-2 w-max text-sm py-1">
-                            Launched
+                            {status}
                           </div>
                         </div>
                         <div className="flex gap-x-4 mt-8  gap-y-4 w-full sm:gap-x-2">
                           <button className="h-14 orange-gradient rounded-md w-full">
-                            Play Game
+                            {btnTitle}
                           </button>
                           <span className="text-white bg-[#0E101C] w-16 rounded-md grid place-items-center text-4xl">
                             <IoMdHeartEmpty />

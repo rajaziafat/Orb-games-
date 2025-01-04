@@ -19,10 +19,10 @@ const GamesCard = (props) => {
     <>
       <motion.div
         {...fadeInFromLeft(0.3 * props.index + 0.1)}
-        className={`bg-[#1A1B22] cursor-pointer h-[513px]  sm:h-max p-5 rounded-xl ${props.className}`}
+        className={`bg-[#1A1B22] cursor-pointer min-h-[513px]  sm:h-max p-5 rounded-xl ${props.className}`}
         onClick={OpenModal}
       >
-        <div className="relative h-[295px]">
+        <div className="relative min-h-[295px]">
           <video
             disablePictureInPicture="true"
             src={`/Videos/${props.index}.mp4`}
@@ -43,7 +43,7 @@ const GamesCard = (props) => {
           </button>
         </div>
         <h3 className="text-white font-semibold font-popins text-xl mt-3 sm:text-xl">
-          GAME # {props.index}
+          {props?.title}
         </h3>
         <p className="text-[#A1A1A1] sm:text-base font-popins text-lg mt-3 mb-5">
           {props.description}
@@ -52,7 +52,15 @@ const GamesCard = (props) => {
           <MdArrowOutward /> Read More
         </button>
       </motion.div>
-      <Modal show={open} closeModal={CloseModal} videoUrl={videoUrl} />
+      <Modal
+        show={open}
+        closeModal={CloseModal}
+        videoUrl={videoUrl}
+        status={props?.status}
+        description={props?.description}
+        btnTitle={props?.btnTitle}
+        tags={props?.tags}
+      />
     </>
   );
 };

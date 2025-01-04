@@ -68,25 +68,27 @@ const About = () => {
           <AboutCards
             direction="flex-row-reverse"
             icon={<Hand />}
-            title="Innovative Play-to-Earn Model"
-            description="Orbit Games implements a fair, sustainable, and accessible play-to-earn model,
-ensuring every player has the opportunity to earn rewards through skillful play. "
+            title="Stable Value, Sustainable Gameplay
+"
+            description="Playable assets are directly anchored within the in-game economy, adding base stability and contributing to the overall health of the ecosystem
+ "
             gradientBg="blue-gradient"
             index={1}
           />
           <AboutCards
             icon={<Game />}
             direction="flex-row"
-            title="Expansive Game Selection  "
-            description="Orbit Games offers a wide range of games across genres. Dive into action, strategy, puzzles, and more, each with unique earning opportunities  "
+            title="Earn Through Engagement"
+            description="Epoch Games puts players first by tying rewards to skill, performance, and participation, creating a fair and thriving community.
+"
             index={2}
             gradientBg="orange-gradient"
           />
           <AboutCards
             direction="flex-row-reverse"
             icon={<Dev />}
-            title="Developer Empowerment  "
-            description="Offering compelling incentives, enabling developers and studios to easily monetize their creations and thrive in our ecosystem.  "
+            title="Masters of the Craft  "
+            description="With experience on legendary titles like Diablo, Gears of War, and Warcraft, our team combines AAA expertise with cutting-edge innovation.  "
             index={3}
             gradientBg="purple-gradient"
           />

@@ -25,18 +25,31 @@ const Games = () => {
           <div className="flex mt-9 gap-8 xl:gap-10 sm:gap-7 flex-wrap justify-center w-full">
             <GamesCard
               index={1}
+              title="Epoch Defense"
               className="w-[488px] sm:w-full lg:w-[349px]"
-              description="Fair Web3 gaming, earn through skill, and leverage our framework that rewards every play and innovation..."
+              description="Defend your world in Epoch Defense, a fast-paced strategy game where powerful energy pylons fuel your fight against relentless enemies and shape the tide of battle."
+              status="Pre Alpha"
+              btnTitle="Sign up to Whitelist"
+              tags={["Action", "FPS", "Tactical"]}
             />
             <GamesCard
               index={2}
+              title="True Fathom"
               className="w-[349px] md:w-[488px] sm:w-full"
-              description="Fair Web3 gaming, earn through skill, and leverage our framework that..."
+              description="True Fathom is a thrilling one-on-one strategy game where cards, dice, and quick thinking collide. Outsmart opponents and strike at the perfect moment to claim victory.
+"
+              status="Alpha"
+              btnTitle="Sign up to Whitelist"
+              tags={["Card Games", "Strategy"]}
             />
             <GamesCard
               index={3}
+              title="Epoch Nexus"
               className="w-[349px] md:w-[488px] sm:w-full"
-              description="Fair Web3 gaming, earn through skill, and leverage our framework that..."
+              description="Epoch Nexus is your hub for managing land, boosting gameplay, and connecting all Epoch Games. Build facilities to unlock unique rewards, resources, and advantages across the ecosystem."
+              status="Launched"
+              btnTitle="Play Game"
+              tags={[" Land Management", "Economy", "Utility"]}
             />
           </div>
           <button className="bg-[#212229] shadow-xl h-12 w-[143px] hover:bg-white duration-500 hover:text-black text-white rounded-md font-semibold hidden sm:flex mx-auto justify-center items-center mt-9">
