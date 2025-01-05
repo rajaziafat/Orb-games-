@@ -10,7 +10,7 @@ const TeamsCard = (props) => {
           alt=""
         />
       </div>
-      <h3 className="font-popins text-lg mt-4 text-white uppercase font-semibold">
+      <h3 className="font-popins text-lg mt-4 text-white uppercase text-center font-semibold">
         {props.title}
       </h3>
     </div>

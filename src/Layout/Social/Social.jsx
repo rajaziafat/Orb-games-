@@ -7,14 +7,19 @@ import { fadeInFromLeft } from "../../utils/helpers/Animation/FadeFromLeftAnimat
 const Social = () => {
   return (
     <>
-      <div className="bg-[#0E101C] sm:hidden py-8 pt-20   relative bg-scoailBg bg-cover h-[400px] flex justify-center items-center ">
+      <div className="bg-[#0E101C] sm:hidden py-8 pt-20   relative bg-scoailBg bg-cover bg-center md:bg-left md:bg-[length:100%_100%]  bg-no-repeat min-h-[400px] flex justify-center items-center ">
+        <img
+          src="/Images/robot.png"
+          className="absolute left-16 xl:left-0 w-72 bottom-0 sm:hidden"
+          alt=""
+        />
         <Helmet style="">
-          <div className="w-10/12 md:w-full absolute bottom-[6rem] left-1/2 -translate-x-1/2 flex justify-end items-center md:bottom-[2rem]">
+          <div className="w-10/12 md:w-full  absolute bottom-[4rem] left-1/2 -translate-x-1/2  flex justify-end items-center md:bottom-[1rem]">
             <div className="flex items-center justify-between w-10/12  gap-10 md:w-6/12">
-              <h3 className="text-white font-neuro text-3xl sm:text-4xl">
-                ORB Games
+              <h3 className="text-white w-1/2 font-neuro text-3xl sm:text-4xl">
+                Epoch Games
               </h3>
-              <div className="flex gap-5 flex-wrap justify-end pr-5">
+              <div className="flex gap-5 w-1/2 flex-wrap justify-end pr-5">
                 <a
                   href="#"
                   className="w-12 h-12 rounded-xl bg-[#191E29] grid place-items-center text-2xl text-white hover:bg-white hover:text-[#191e29] duration-500"
@@ -70,7 +75,7 @@ const Social = () => {
               {...fadeInFromLeft(0.2)}
               className="text-white font-neuro text-3xl sm:text-4xl"
             >
-              ORB Games
+              Epoch Games
             </motion.h3>
             <div className="flex gap-5 flex-wrap justify-end pr-5 sm:justify-center sm:pr-0">
               <motion.a
@@ -121,11 +126,7 @@ const Social = () => {
               </motion.a>
             </div>
           </div>
-          <motion.img
-            src="Images/girl.png"
-            className="absolute bottom-0 left-0 w-full"
-            alt=""
-          />
+          <motion.img src="Images/robot.png" className="w-full" alt="" />
         </div>
       </div>
     </>

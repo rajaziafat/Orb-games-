@@ -22,16 +22,21 @@ const AboutCards = (props) => {
       >
         <div className=" w-full h-[500px] sm:h-[340px] relative bg-red-200 rounded-2xl overflow-hidden">
           {/* <ReactPlayer url={`/Videos/${props.index}.mp4`} autoPlay /> */}
-          <video
-            src={`/Videos/${props.index}.mp4`}
-            className="w-full h-full object-cover absolute  top-0 left-0"
-            controlsList="nodownload"
-            autoPlay
-            muted
-            loop
-            type="video/mp4"
-            playsInline
-          ></video>
+
+          {props?.isVideo ? (
+            <video
+              src={props?.src}
+              className="w-full h-full object-cover absolute  top-0 left-0"
+              controlsList="nodownload"
+              autoPlay
+              muted
+              loop
+              type="video/mp4"
+              playsInline
+            ></video>
+          ) : (
+            <img src={props?.src} alt="" />
+          )}
         </div>
       </motion.div>
     </div>

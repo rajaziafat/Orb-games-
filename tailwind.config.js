@@ -16,7 +16,7 @@ export default {
       backgroundImage: {
         heroBg: "url('/Images/Heros-bg.png')",
         heromobileBg: "url('/Images/mobile.png')",
-        scoailBg: "url('/Images/Social.png')",
+        scoailBg: "url('/Images/Social2.png')",
         scoailMobileBg: "url('/Images/social-mobile.png')",
       },
       fontFamily: {

@@ -62,7 +62,7 @@ const About = () => {
           {...fadeInFromLeft(0.2)}
           className="text-center text-5xl z-20 relative my-12 font-neuro leading-[59px] text-white sm:text-4xl xsm:text-3xl xsm:leading-10"
         >
-          Web3 Gaming Unleashed <span className="block"></span> on Orb Games
+          Web3 Gaming Unleashed <span className="block"></span> on Epoch Games
         </motion.h2>
         <div className="mt-24 flex gap-24 flex-wrap relative z-30 sm:gap-9 sm:mt-9 flex-col ">
           <AboutCards
@@ -74,6 +74,7 @@ const About = () => {
  "
             gradientBg="blue-gradient"
             index={1}
+            src="/about-1.png"
           />
           <AboutCards
             icon={<Game />}
@@ -83,6 +84,8 @@ const About = () => {
 "
             index={2}
             gradientBg="orange-gradient"
+            src="/about-2.mp4"
+            isVideo={true}
           />
           <AboutCards
             direction="flex-row-reverse"
@@ -91,6 +94,7 @@ const About = () => {
             description="With experience on legendary titles like Diablo, Gears of War, and Warcraft, our team combines AAA expertise with cutting-edge innovation.  "
             index={3}
             gradientBg="purple-gradient"
+            src="/about-3.png"
           />
         </div>
       </Helmet>

@@ -14,6 +14,58 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { motion } from "framer-motion";
 import { fadeInFromLeft } from "../../utils/helpers/Animation/FadeFromLeftAnimation";
 const Teams = () => {
+  const teamMembers = [
+    {
+      name: "Kai Hatherley",
+      title: "COO",
+      img: "Images/team1.png",
+      parentTilt: "rotate-[4deg]",
+      imgTilt: "-rotate-[2deg]",
+    },
+    {
+      name: "Daniel Jensen",
+      title: "CEO",
+      img: "Images/team2.png",
+      parentTilt: "-rotate-[4deg]",
+      imgTilt: "rotate-[2deg]",
+    },
+    {
+      name: "Christopher (Lav) Taylor",
+      title: "Head of Game Development",
+      img: "Images/team3.png",
+      parentTilt: "-rotate-[4deg]",
+      imgTilt: "rotate-[2deg]",
+    },
+    {
+      name: "Artem Zaitsev",
+      title: "CTO",
+      img: "Images/team1.png",
+      parentTilt: "rotate-[4deg]",
+      imgTilt: "-rotate-[2deg]",
+    },
+    {
+      name: "Marek Benda",
+      title: "Community Manager",
+      img: "Images/team2.png",
+      parentTilt: "-rotate-[4deg]",
+      imgTilt: "rotate-[2deg]",
+    },
+    {
+      name: "Jung Woong Park",
+      title: "Strategic Advisor",
+      img: "Images/team3.png",
+      parentTilt: "rotate-[4deg]",
+      imgTilt: "-rotate-[2deg]",
+    },
+    {
+      name: "Ivan Tomic",
+      title: "Advisor",
+      img: "Images/team1.png",
+      parentTilt: "-rotate-[4deg]",
+      imgTilt: "rotate-[2deg]",
+    },
+  ];
+
   return (
     <div className="bg-[#0E101C] py-8 pt-20   relative team overflow-hidden sm:pt-0">
       <div className="absolute top-0 right-[5%] sm:hidden">
@@ -31,9 +83,19 @@ const Teams = () => {
         </motion.h2>
         <motion.div
           {...fadeInFromLeft(0.4)}
-          className="mt-14 relative z-10 flex justify-center gap-16 slg:flex-wrap sm:hidden "
+          className="mt-14 relative z-10 flex flex-wrap justify-center gap-16 gap-y-20  sm:hidden "
         >
-          <TeamsCard
+          {teamMembers.map((member, index) => (
+            <TeamsCard
+              key={index}
+              className=""
+              parentTilt={member.parentTilt}
+              imgTilt={member.imgTilt}
+              img={member.img}
+              title={`${member.name} - ${member.title}`}
+            />
+          ))}
+          {/* <TeamsCard
             className=""
             parentTilt="rotate-[4deg]"
             imgTilt="-rotate-[2deg]"
@@ -75,7 +137,7 @@ const Teams = () => {
             imgTilt="rotate-[2deg]"
             img="Images/team3.png"
             title="Jung Woong Park Strategic Advisor"
-          />
+          /> */}
         </motion.div>
         {/* <motion.div
           {...fadeInFromLeft(0.6)}

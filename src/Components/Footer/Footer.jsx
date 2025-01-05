@@ -12,15 +12,17 @@ const Footer = () => {
             <div className="border-r border-r-[#2E2E31] md:border-b md:border-b-[#2e2e31] py-10 w-1/2 md:w-full md:border-r-0 md:flex md:flex-col md:items-center ">
               <motion.img
                 {...fadeInFromLeft(0.3)}
-                src="Images/Logo.svg"
+                src="Images/logo-footer.png"
                 alt=""
+                className="w-52"
               />
               <motion.p
                 {...fadeInFromLeft(0.4)}
                 className="text-[#A1A1A1] font-popins text-lg mt-8  w-10/12 md:text-center sm:w-full"
               >
-                Fair Web3 gaming, earn through skill, and leverage our framework
-                that rewards every play and innovation
+                Immersive gameplay meets sustainable economies, with asset
+                values seamlessly tied to in-game progression and player-driven
+                experiences.
               </motion.p>
               <motion.h2
                 {...fadeInFromLeft(0.5)}
