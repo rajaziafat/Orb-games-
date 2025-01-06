@@ -26,11 +26,18 @@ const Games = () => {
             <GamesCard
               index={1}
               title="Epoch Defense"
-              className="w-[488px] sm:w-full lg:w-[349px]"
+              className="w-[488px] md:w-[488px] sm:w-full lg:w-[349px]"
               description="Defend your world in Epoch Defense, a fast-paced strategy game where powerful energy pylons fuel your fight against relentless enemies and shape the tide of battle."
               status="Pre Alpha"
               btnTitle="Sign up to Whitelist"
               tags={["Action", "FPS", "Tactical"]}
+              images={[
+                "/Images/g1_1.png",
+                "/Images/g1_2.png",
+                "/Images/g1_3.png",
+                "/Images/g1_4.png",
+                "/Images/g1_5.png",
+              ]}
             />
             <GamesCard
               index={2}
@@ -41,6 +48,8 @@ const Games = () => {
               status="Alpha"
               btnTitle="Sign up to Whitelist"
               tags={["Card Games", "Strategy"]}
+              images={["/Videos/g2.mp4"]}
+              isVideo={true}
             />
             <GamesCard
               index={3}
@@ -50,6 +59,8 @@ const Games = () => {
               status="Launched"
               btnTitle="Play Game"
               tags={[" Land Management", "Economy", "Utility"]}
+              images={["/Videos/3.mp4"]}
+              isVideo={true}
             />
           </div>
           <button className="bg-[#212229] shadow-xl h-12 w-[143px] hover:bg-white duration-500 hover:text-black text-white rounded-md font-semibold hidden sm:flex mx-auto justify-center items-center mt-9">

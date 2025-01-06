@@ -22,11 +22,15 @@ const Modal = ({
   btnTitle,
   description,
   tags,
+  title,
+  isVideo,
+  images,
 }) => {
+  console.log(images[0]);
   const [playing, setPlaying] = useState(false);
   const [volume, setVolume] = useState(0.8);
   const [played, setPlayed] = useState(0);
-  const [playvideo, setPalyVideo] = useState(videoUrl || `/Videos/1.mp4`);
+  const [playvideo, setPalyVideo] = useState(images[0]);
   const playerRef = useRef();
 
   const togglePlay = () => setPlaying(!playing);
@@ -44,13 +48,18 @@ const Modal = ({
 
   //Slecting the Video
   const selectVideo = (id) => {
-    setPalyVideo(`/Videos/${id}.mp4`);
+    setPalyVideo(id);
   };
 
   return (
     <>
       <Transition appear show={show} as={Fragment}>
-        <Dialog as="div" className="relative z-30" onClose={closeModal}>
+        <Dialog
+          as="div"
+          className="relative z-30 modal-videos"
+          open={show}
+          onClose={closeModal}
+        >
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -74,56 +83,30 @@ const Modal = ({
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full  transform overflow-hidden rounded-2xl  p-6 sm:p-2 text-left align-middle shadow-xl transition-all">
-                  <div className="bg-[#1A1B22] relative rounded-lg px-4 py-5 sm:py-9 sm:px-2">
+                <Dialog.Panel className="w-full max-w-7xl  transform overflow-hidden rounded-2xl  p-6 sm:p-2 text-left align-middle shadow-xl transition-all">
+                  <div className="bg-[#1A1B22] md:pt-9 relative rounded-lg px-4 py-5 sm:py-9 sm:px-2">
                     <span
-                      className="absolute top-3 right-3 text-white text-2xl cursor-pointer sm:top-1 sm:right-1"
+                      className="absolute top-3 right-3 md:top-1 md:right-1 text-white text-2xl cursor-pointer sm:top-1 sm:right-1"
                       onClick={closeModal}
                     >
                       <MdOutlineClose />
                     </span>
                     <div className="flex slg:flex-col gap-y-4">
                       <div className="w-7/12 slg:w-full sm:rounded-lg overflow-hidden">
-                        <ReactPlayer
-                          // url="https://www.youtube.com/watch?v=yUTvaWgK2QU"
-                          url={playvideo}
-                          controls={true}
-                          className="!w-11/12 !h-[350px] slg:!w-full !rounded-xl "
-                        />
-                        {/* <div className="controls">
-                          <button onClick={togglePlay}>
-                            {playing ? <MdPause /> : <MdPlayArrow />}
-                          </button>
-                          <input
-                            type="range"
-                            min={0}
-                            max={1}
-                            step="any"
-                            value={played}
-                            onChange={(e) =>
-                              playerRef.current.seekTo(
-                                parseFloat(e.target.value)
-                              )
-                            }
-                          />
-                          <button onClick={toggleFullScreen}>
-                            <MdFullscreen />
-                          </button>
-                          <input
-                            type="range"
-                            min={0}
-                            max={1}
-                            step="0.05"
-                            value={volume}
-                            onChange={handleVolumeChange}
-                          />
-                          <a href="a.mp4" download>
-                            <button>
-                              <MdDownload />
-                            </button>
-                          </a>
-                        </div> */}
-
+                        <div className="relative h-[350px] max-h-[380px] w-11/12">
+                          {isVideo ? (
+                            <ReactPlayer
+                              url={playvideo}
+                              controls={true}
+                              className="!w-full !h-[350px] slg:!w-full !rounded-xl object-cover"
+                            />
+                          ) : (
+                            <img
+                              src={playvideo}
+                              className="w-full h-full object-cover slg:w-full rounded-2xl"
+                            />
+                          )}
+                        </div>
                         <div className="mt-9 relative w-[90%]   sm:mx-auto sm:w-[95%] sm:mt-5 pl-3">
                           <button className="w-5 h-5 swiper-prev-btn rounded-full text-xl bg-white absolute top-[45%] translate-y-[-25%] sm:-translate-y-1/2 left-1 z-30 sm:top-[45%]">
                             <IoIosArrowRoundBack />
@@ -150,7 +133,20 @@ const Modal = ({
                               600: { slidesPerView: 4 },
                             }}
                           >
-                            <SwiperSlide onClick={() => selectVideo(3)}>
+                            {images?.map((item, ind) => {
+                              return (
+                                <SwiperSlide
+                                  key={ind}
+                                  onClick={() => selectVideo(item)}
+                                >
+                                  <ModalVideoCard
+                                    img={item}
+                                    isVideo={isVideo}
+                                  />
+                                </SwiperSlide>
+                              );
+                            })}
+                            {/* <SwiperSlide onClick={() => selectVideo(3)}>
                               <ModalVideoCard img={3} />
                             </SwiperSlide>
                             <SwiperSlide onClick={() => selectVideo(2)}>
@@ -173,7 +169,7 @@ const Modal = ({
                             </SwiperSlide>
                             <SwiperSlide onClick={() => selectVideo(2)}>
                               <ModalVideoCard img={2} />
-                            </SwiperSlide>
+                            </SwiperSlide> */}
                           </Swiper>
                         </div>
                       </div>
@@ -192,7 +188,7 @@ const Modal = ({
                           </button> */}
                         </div>
                         <h1 className="font-neuro  text-6xl mt-4 md:text-5xl sm:text-4xl">
-                          Valorant
+                          {title}
                         </h1>
                         <p className="font-popins text-[#A1A1A1] text-lg my-8">
                           {description}
@@ -237,13 +233,17 @@ const Modal = ({
 const ModalVideoCard = (props) => {
   return (
     <div className="w-[160px] h-[81px] relative cursor-pointer z-10">
-      <video
-        src={`/Videos/${props.img}.mp4`}
-        disablePictureInPicture="true"
-        className="absolute top-0 left-0 w-full h-full object-cover rounded-md"
-        playsInline
-        controlsList="nodownload"
-      ></video>
+      {props?.isVideo ? (
+        <video
+          src={`${props.img}`}
+          disablePictureInPicture="true"
+          className="absolute top-0 left-0 w-full h-full object-cover rounded-md"
+          playsInline
+          controlsList="nodownload"
+        ></video>
+      ) : (
+        <img src={props?.img} />
+      )}
       {/* <img src={`/Images/Modal${props.img}.png`} alt="" /> */}
     </div>
   );

@@ -23,15 +23,23 @@ const GamesCard = (props) => {
         onClick={OpenModal}
       >
         <div className="relative min-h-[295px]">
-          <video
-            disablePictureInPicture="true"
-            src={`/Videos/${props.index}.mp4`}
-            muted
-            autoPlay
-            playsInline
-            controlsList="nodownload"
-            className="absolute top-0 left-0 w-full h-full object-cover rounded-xl "
-          ></video>
+          {props?.isVideo ? (
+            <video
+              disablePictureInPicture="true"
+              src={props?.images[0]}
+              muted
+              autoPlay
+              playsInline
+              controlsList="nodownload"
+              className="absolute top-0 left-0 w-full h-full object-cover rounded-xl "
+            ></video>
+          ) : (
+            <img
+              src={props?.images[0]}
+              className="w-full h-full object-cover absolute top-0 left-0"
+            />
+          )}
+
           {/* <img
             src={`/Video/${props.index}.mp4`}
             className="w-full h-full sm:object-cover"
@@ -55,7 +63,10 @@ const GamesCard = (props) => {
       <Modal
         show={open}
         closeModal={CloseModal}
+        title={props?.title}
         videoUrl={videoUrl}
+        isVideo={props?.isVideo}
+        images={props?.images}
         status={props?.status}
         description={props?.description}
         btnTitle={props?.btnTitle}

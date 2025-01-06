@@ -72,3 +72,10 @@
   opacity: 1 !important;
   outline: 8px solid rgba(255, 113, 54, 0.3) !important ;
 }
+
+.modal-videos video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
