@@ -86,14 +86,14 @@ const Modal = ({
                 <Dialog.Panel className="w-full max-w-7xl  transform overflow-hidden rounded-2xl  p-6 sm:p-2 text-left align-middle shadow-xl transition-all">
                   <div className="bg-[#1A1B22] md:pt-9 relative rounded-lg px-4 py-5 sm:py-9 sm:px-2">
                     <span
-                      className="absolute top-3 right-3 md:top-1 md:right-1 text-white text-2xl cursor-pointer sm:top-1 sm:right-1"
+                      className="absolute top-3 right-3 md:top-1 md:right-2 text-white text-2xl cursor-pointer sm:top-1 sm:right-2"
                       onClick={closeModal}
                     >
                       <MdOutlineClose />
                     </span>
                     <div className="flex slg:flex-col gap-y-4">
                       <div className="w-7/12 slg:w-full sm:rounded-lg overflow-hidden">
-                        <div className="relative h-[350px] max-h-[380px] w-11/12">
+                        <div className="relative h-[350px] max-h-[380px] w-11/12 md:w-full">
                           {isVideo ? (
                             <ReactPlayer
                               url={playvideo}
@@ -108,10 +108,10 @@ const Modal = ({
                           )}
                         </div>
                         <div className="mt-9 relative w-[90%]   sm:mx-auto sm:w-[95%] sm:mt-5 pl-3">
-                          <button className="w-5 h-5 swiper-prev-btn rounded-full text-xl bg-white absolute top-[45%] translate-y-[-25%] sm:-translate-y-1/2 left-1 z-30 sm:top-[45%]">
+                          <button className="w-5 h-5 swiper-prev-btn rounded-full text-xl bg-white absolute top-[45%] translate-y-[-25%] sm:-translate-y-1/2 left-1 z-30 sm:top-[45%] sm:size-6 sm:text-[25px]">
                             <IoIosArrowRoundBack />
                           </button>
-                          <button className="w-5 h-5 swiper-next-btn rounded-full text-xl bg-white absolute top-[45%] translate-y-[-25%] sm:-translate-y-1/2 -right-3 z-30 sm:top-[45%] sm:-right-2">
+                          <button className="w-5 h-5 swiper-next-btn rounded-full text-xl bg-white absolute top-[45%] translate-y-[-25%] sm:-translate-y-1/2 -right-3 z-30 sm:top-[45%] sm:size-6 sm:text-[25px] sm:-right-2">
                             <IoIosArrowRoundForward />
                           </button>
 

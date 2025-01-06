@@ -70,7 +70,7 @@ const About = () => {
             icon={<Hand />}
             title="Stable Value, Sustainable Gameplay
 "
-            description="Playable assets are directly anchored within the in-game economy, adding base stability and contributing to the overall health of the ecosystem
+            description="Playable assets are directly anchored within the in-game economy, adding base stability and contributing to the overall health of the ecosystem.
  "
             gradientBg="blue-gradient"
             index={1}
@@ -91,7 +91,7 @@ const About = () => {
             direction="flex-row-reverse"
             icon={<Dev />}
             title="Masters of the Craft  "
-            description="With experience on legendary titles like Diablo, Gears of War, and Warcraft, our team combines AAA expertise with cutting-edge innovation.  "
+            description="With experience on legendary titles like Diablo, Gears of War, and Warcraft, our team combines AAA expertise with cutting-edge innovation."
             index={3}
             gradientBg="purple-gradient"
             src="/about-3.png"

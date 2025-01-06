@@ -35,7 +35,11 @@ const AboutCards = (props) => {
               playsInline
             ></video>
           ) : (
-            <img src={props?.src} alt="" />
+            <img
+              src={props?.src}
+              alt=""
+              className="absolute top-0 left-0 object-cover size-full"
+            />
           )}
         </div>
       </motion.div>

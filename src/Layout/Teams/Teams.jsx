@@ -35,6 +35,7 @@ const Teams = () => {
       img: "Images/team3.png",
       parentTilt: "-rotate-[4deg]",
       imgTilt: "rotate-[2deg]",
+      className: "md:mb-10",
     },
     {
       name: "Artem Zaitsev",
@@ -83,88 +84,19 @@ const Teams = () => {
         </motion.h2>
         <motion.div
           {...fadeInFromLeft(0.4)}
-          className="mt-14 relative z-10 flex flex-wrap justify-center gap-16 gap-y-20  sm:hidden "
+          className="mt-14 relative z-10 flex flex-wrap justify-center gap-16 gap-y-16 sm:hidden   "
         >
           {teamMembers.map((member, index) => (
             <TeamsCard
               key={index}
-              className=""
               parentTilt={member.parentTilt}
               imgTilt={member.imgTilt}
               img={member.img}
+              className={member.className}
               title={`${member.name} - ${member.title}`}
             />
           ))}
-          {/* <TeamsCard
-            className=""
-            parentTilt="rotate-[4deg]"
-            imgTilt="-rotate-[2deg]"
-            img="Images/team1.png"
-            title="Kai Hatherley - COO
-"
-          />
-          <TeamsCard
-            className=""
-            parentTilt="-rotate-[4deg]"
-            imgTilt="rotate-[2deg]"
-            img="Images/team2.png"
-            title="Daniel Jensen - CEO"
-          />
-          <TeamsCard
-            className=""
-            parentTilt="-rotate-[4deg]"
-            imgTilt="rotate-[2deg]"
-            img="Images/team3.png"
-            title="Christopher (Lav) Taylor  Head of Game Development"
-          />
-          <TeamsCard
-            className=""
-            parentTilt="-rotate-[4deg]"
-            imgTilt="rotate-[2deg]"
-            img="Images/team3.png"
-            title="Artem Zaitsev CTO"
-          />
-          <TeamsCard
-            className=""
-            parentTilt="-rotate-[4deg]"
-            imgTilt="rotate-[2deg]"
-            img="Images/team3.png"
-            title="Marek Benda - CMO"
-          />
-          <TeamsCard
-            className=""
-            parentTilt="-rotate-[4deg]"
-            imgTilt="rotate-[2deg]"
-            img="Images/team3.png"
-            title="Jung Woong Park Strategic Advisor"
-          /> */}
         </motion.div>
-        {/* <motion.div
-          {...fadeInFromLeft(0.6)}
-          className="mt-5 relative z-10 flex justify-center  gap-16 slg:flex-wrap sm:hidden"
-        >
-          <TeamsCard
-            className=""
-            parentTilt="rotate-[4deg]"
-            imgTilt="-rotate-[2deg]"
-            img="Images/team1.png"
-            title="Alex Nguyen - CTO"
-          />
-          <TeamsCard
-            className=""
-            parentTilt="-rotate-[4deg]"
-            imgTilt="rotate-[2deg]"
-            img="Images/team2.png"
-            title="Sarah Chen - CEO"
-          />
-          <TeamsCard
-            className=""
-            parentTilt="-rotate-[4deg]"
-            imgTilt="rotate-[2deg]"
-            img="Images/team3.png"
-            title="Michael DOE - CFO"
-          />
-        </motion.div> */}
         <div className=" hidden sm:block">
           <Swiper
             pagination={{
@@ -172,86 +104,71 @@ const Teams = () => {
               clickable: true,
             }}
             autoplay={true}
+            speed={1400}
             modules={[Pagination, Autoplay]}
             className="mySwiper w-full h-full"
           >
-            <SwiperSlide className="flex justify-center items-center text-center">
-              <div className="mt-5 relative z-10 flex justify-center  gap-16 slg:flex-wrap ">
-                <TeamsCard
-                  className=""
-                  parentTilt="rotate-[4deg]"
-                  imgTilt="-rotate-[2deg]"
-                  img="Images/team1.png"
-                  title="Alex Nguyen - CTO"
-                />
-                <TeamsCard
-                  className=""
-                  parentTilt="-rotate-[4deg]"
-                  imgTilt="rotate-[2deg]"
-                  img="Images/team2.png"
-                  title="Sarah Chen - CEO"
-                />
-                <TeamsCard
-                  className=""
-                  parentTilt="-rotate-[4deg]"
-                  imgTilt="rotate-[2deg]"
-                  img="Images/team3.png"
-                  title="Michael DOE - CFO"
-                />
-              </div>
-            </SwiperSlide>
-            {/* <SwiperSlide className="flex justify-center items-center text-center">
-              {" "}
-              <div className="mt-5 relative z-10 flex justify-center  gap-16 slg:flex-wrap ">
-                <TeamsCard
-                  className=""
-                  parentTilt="rotate-[4deg]"
-                  imgTilt="-rotate-[2deg]"
-                  img="Images/team1.png"
-                  title="Alex Nguyen - CTO"
-                />
-                <TeamsCard
-                  className=""
-                  parentTilt="-rotate-[4deg]"
-                  imgTilt="rotate-[2deg]"
-                  img="Images/team2.png"
-                  title="Sarah Chen - CEO"
-                />
-                <TeamsCard
-                  className=""
-                  parentTilt="-rotate-[4deg]"
-                  imgTilt="rotate-[2deg]"
-                  img="Images/team3.png"
-                  title="Michael DOE - CFO"
-                />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="flex justify-center items-center text-center">
-              {" "}
-              <div className="mt-5 relative z-10 flex justify-center  gap-16 slg:flex-wrap ">
-                <TeamsCard
-                  className=""
-                  parentTilt="rotate-[4deg]"
-                  imgTilt="-rotate-[2deg]"
-                  img="Images/team1.png"
-                  title="Alex Nguyen - CTO"
-                />
-                <TeamsCard
-                  className=""
-                  parentTilt="-rotate-[4deg]"
-                  imgTilt="rotate-[2deg]"
-                  img="Images/team2.png"
-                  title="Sarah Chen - CEO"
-                />
-                <TeamsCard
-                  className=""
-                  parentTilt="-rotate-[4deg]"
-                  imgTilt="rotate-[2deg]"
-                  img="Images/team3.png"
-                  title="Michael DOE - CFO"
-                />
-              </div>
-            </SwiperSlide> */}
+            {/* {teamMembers
+              .reduce((groups, member, index) => {
+                const groupIndex = Math.floor(index / 3); // Grouping every 3 items
+                if (!groups[groupIndex]) {
+                  groups[groupIndex] = [];
+                }
+                groups[groupIndex].push(member);
+                return groups;
+              }, [])
+              .map((group, groupIndex) => (
+                <SwiperSlide
+                  key={groupIndex}
+                  className="flex justify-center items-center text-center"
+                >
+                  <div className="mt-5 relative z-10 flex justify-center gap-16 slg:flex-wrap">
+                    {group.map((member, index) => (
+                      <TeamsCard
+                        key={index}
+                        parentTilt={member.parentTilt}
+                        imgTilt={member.imgTilt}
+                        img={member.img}
+                        title={`${member.name} - ${member.title}`}
+                      />
+                    ))}
+                  </div>
+                </SwiperSlide>
+              ))} */}
+            {teamMembers
+              .reduce((groups, member, index) => {
+                const groupIndex = Math.floor(index / 3); // Grouping every 3 items
+                if (!groups[groupIndex]) {
+                  groups[groupIndex] = [];
+                }
+                groups[groupIndex].push(member);
+                return groups;
+              }, [])
+              .map((group, groupIndex, allGroups) => {
+                // If it's the last group and has less than 3 members
+                if (groupIndex === allGroups.length - 1 && group.length < 3) {
+                  const itemsToAdd = 3 - group.length; // Calculate how many items to add
+                  group.push(...teamMembers.slice(0, itemsToAdd)); // Add the first 'itemsToAdd' members
+                }
+                return (
+                  <SwiperSlide
+                    key={groupIndex}
+                    className="flex justify-center items-center text-center"
+                  >
+                    <div className="mt-5 relative z-10 flex justify-center gap-16 slg:flex-wrap">
+                      {group.map((member, index) => (
+                        <TeamsCard
+                          key={index}
+                          parentTilt={member.parentTilt}
+                          imgTilt={member.imgTilt}
+                          img={member.img}
+                          title={`${member.name} - ${member.title}`}
+                        />
+                      ))}
+                    </div>
+                  </SwiperSlide>
+                );
+              })}
           </Swiper>
           <div className="swiper-custom-pagination  flex justify-center mt-10"></div>
         </div>

@@ -9,7 +9,7 @@ const NavBar = () => {
   return (
     <>
       <nav className="bg-transparent w-full h-32 flex justify-center items-center sm:h-20 ">
-        <div className="w-10/12 max-w-[1400px] flex justify-between items-center gap-5 xl:w-[95%]">
+        <div className="w-10/12 max-w-[1400px] flex justify-between items-center gap-5 xl:w-[95%] lg:w-11/12">
           <div className="">
             <motion.img
               {...fadeInFromLeft()}
