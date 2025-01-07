@@ -60,12 +60,11 @@ const NavBar = () => {
             </ul>
           </div>
           <div className="slg:hidden flex">
-            <motion.button
-              {...fadeInFromLeft(0.4)}
-              className="bg-[#212229] shadow-xl h-12 w-[143px] hover:bg-white duration-500 hover:text-black text-white rounded-md font-semibold"
-            >
-              Contact Us
-            </motion.button>
+            <motion.div {...fadeInFromLeft(0.4)} className="">
+              <button className="bg-[#212229] shadow-xl h-12 w-[143px] hover:bg-white duration-500 hover:text-black text-white rounded-md font-semibold">
+                Contact Us
+              </button>
+            </motion.div>
           </div>
           <div className="hidden slg:block">
             <motion.button
