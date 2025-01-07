@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Helmet from "../../Components/Helmet/Helmet";
-import { BsTelegram, BsMedium } from "react-icons/bs";
+import { BsTelegram, BsMedium, BsSubstack } from "react-icons/bs";
 import { FaXTwitter, FaDiscord } from "react-icons/fa6";
 import { fadeInFromLeft } from "../../utils/helpers/Animation/FadeFromLeftAnimation";
 
@@ -21,25 +21,36 @@ const Social = () => {
               </h3>
               <div className="flex gap-5 w-1/2 flex-wrap justify-end lg:justify-center pr-5">
                 <a
-                  href="#"
+                  target="_blank"
+                  href="https://t.me/Epoch_Games"
                   className="w-12 h-12 rounded-xl bg-[#191E29] grid place-items-center text-2xl text-white hover:bg-white hover:text-[#191e29] duration-500"
                 >
                   <BsTelegram />
                 </a>
                 <a
-                  href="#"
+                  target="_blank"
+                  href="https://x.com/epochgamesio"
                   className="w-12 h-12 rounded-xl bg-[#191E29] grid place-items-center text-2xl text-white hover:bg-white hover:text-[#191e29] duration-500"
                 >
                   <FaXTwitter />
                 </a>
                 <a
-                  href="#"
+                  target="_blank"
+                  href="https://medium.com/epoch-games"
                   className="w-12 h-12 rounded-xl bg-[#191E29] grid place-items-center text-2xl text-white hover:bg-white hover:text-[#191e29] duration-500"
                 >
                   <BsMedium />
                 </a>
                 <a
-                  href="#"
+                  target="_blank"
+                  href="https://substack.com/@epochgames"
+                  className="w-12 h-12 rounded-xl bg-[#191E29] grid place-items-center text-2xl text-white hover:bg-white hover:text-[#191e29] duration-500"
+                >
+                  <BsSubstack />
+                </a>
+                <a
+                  target="_blank"
+                  href="https://epoch-games.gitbook.io/epoch-games"
                   className="w-12 h-12 rounded-xl bg-[#191E29] grid place-items-center text-2xl text-white hover:bg-white hover:text-[#191e29] duration-500 group"
                 >
                   {/* <SiGitbook /> */}
@@ -56,6 +67,7 @@ const Social = () => {
                   </svg>
                 </a>
                 <a
+                  target="_blank"
                   href="#"
                   className="w-12 h-12 rounded-xl bg-[#191E29] grid place-items-center text-2xl text-white hover:bg-white hover:text-[#191e29] duration-500"
                 >
@@ -80,6 +92,7 @@ const Social = () => {
             <div className="flex gap-5 flex-wrap justify-end pr-5 sm:justify-center sm:pr-0">
               <motion.a
                 {...fadeInFromLeft(0.3)}
+                target="_blank"
                 href="#"
                 className="w-12 h-12 rounded-xl bg-[#191E29] grid place-items-center text-2xl text-white hover:bg-white hover:text-[#191e29] duration-500"
               >
@@ -87,6 +100,7 @@ const Social = () => {
               </motion.a>
               <motion.a
                 {...fadeInFromLeft(0.4)}
+                target="_blank"
                 href="#"
                 className="w-12 h-12 rounded-xl bg-[#191E29] grid place-items-center text-2xl text-white hover:bg-white hover:text-[#191e29] duration-500"
               >
@@ -94,6 +108,7 @@ const Social = () => {
               </motion.a>
               <motion.a
                 {...fadeInFromLeft(0.5)}
+                target="_blank"
                 href="#"
                 className="w-12 h-12 rounded-xl bg-[#191E29] grid place-items-center text-2xl text-white hover:bg-white hover:text-[#191e29] duration-500"
               >
@@ -101,6 +116,7 @@ const Social = () => {
               </motion.a>
               <motion.a
                 {...fadeInFromLeft(0.6)}
+                target="_blank"
                 href="#"
                 className="w-12 h-12 rounded-xl bg-[#191E29] grid place-items-center text-2xl text-white hover:bg-white hover:text-[#191e29] duration-500 group"
               >
@@ -119,6 +135,7 @@ const Social = () => {
               </motion.a>
               <motion.a
                 {...fadeInFromLeft(0.7)}
+                target="_blank"
                 href="#"
                 className="w-12 h-12 rounded-xl bg-[#191E29] grid place-items-center text-2xl text-white hover:bg-white hover:text-[#191e29] duration-500"
               >

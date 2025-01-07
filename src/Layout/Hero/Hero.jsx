@@ -12,8 +12,10 @@ const Hero = () => {
             {...fadeInFromLeft(0.4)}
             className="text-white text-xl w-8/12 sm:w-full  font-neuro grid grid-flow-col items-center sm:text-sm"
           >
-            A gaming ecosystem built for players, with immersive gameplay and
-            asset values directly tied to the in-game economy.
+            {/* A gaming ecosystem built for players, with immersive gameplay and
+            asset values directly tied to the in-game economy. */}
+            An immersive gaming ecosystem where asset values are tied to the
+            in-game economy
           </motion.h3>
           <motion.h1
             {...fadeInFromLeft(0.6)}
@@ -22,12 +24,14 @@ const Hero = () => {
             The Game Economy, Reinvented
             {/* Play, <br className="sm:hidden" /> Prosper, Build */}
           </motion.h1>
-          <motion.button
-            {...fadeInFromLeft(0.8)}
-            className="btn-bg w-[209px] mt-4 h-14 rounded-md  font-popins sm:block sm:mx-auto"
-          >
-            <span className="relative  z-10">Read Whitepaper</span>
-          </motion.button>
+          <a href="https://epoch-games.gitbook.io/epoch-games" target="_blank">
+            <motion.button
+              {...fadeInFromLeft(0.8)}
+              className="btn-bg w-[209px] mt-4 h-14 rounded-md  font-popins sm:block sm:mx-auto"
+            >
+              <span className="relative  z-10">Read Whitepaper</span>
+            </motion.button>
+          </a>
         </Helmet>
       </div>
     </div>

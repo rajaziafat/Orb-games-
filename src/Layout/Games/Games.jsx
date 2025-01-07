@@ -59,8 +59,9 @@ const Games = () => {
               status="Launched"
               btnTitle="Play Game"
               tags={[" Land Management", "Economy", "Utility"]}
-              images={["/Videos/3.mp4"]}
-              isVideo={true}
+              images={["/Images/g3.png"]}
+              // images={["/Videos/3.mp4"]}
+              // isVideo={true}
             />
           </div>
           <button className="bg-[#212229] shadow-xl h-12 w-[143px] hover:bg-white duration-500 hover:text-black text-white rounded-md font-semibold hidden sm:flex mx-auto justify-center items-center mt-9">

@@ -16,18 +16,18 @@ import { fadeInFromLeft } from "../../utils/helpers/Animation/FadeFromLeftAnimat
 const Teams = () => {
   const teamMembers = [
     {
-      name: "Kai Hatherley",
-      title: "COO",
-      img: "Images/team1.png",
-      parentTilt: "rotate-[4deg]",
-      imgTilt: "-rotate-[2deg]",
-    },
-    {
       name: "Daniel Jensen",
       title: "CEO",
-      img: "Images/team2.png",
+      img: "Images/team1.jpg",
       parentTilt: "-rotate-[4deg]",
       imgTilt: "rotate-[2deg]",
+    },
+    {
+      name: "Kai Hatherley",
+      title: "COO",
+      img: "Images/team2.jpg",
+      parentTilt: "rotate-[4deg]",
+      imgTilt: "-rotate-[2deg]",
     },
     {
       name: "Christopher (Lav) Taylor",
@@ -40,28 +40,28 @@ const Teams = () => {
     {
       name: "Artem Zaitsev",
       title: "CTO",
-      img: "Images/team1.png",
+      img: "Images/team4.jpg",
       parentTilt: "rotate-[4deg]",
       imgTilt: "-rotate-[2deg]",
     },
     {
       name: "Marek Benda",
       title: "Community Manager",
-      img: "Images/team2.png",
+      img: "Images/team5.jpg",
       parentTilt: "-rotate-[4deg]",
       imgTilt: "rotate-[2deg]",
     },
     {
       name: "Jung Woong Park",
       title: "Strategic Advisor",
-      img: "Images/team3.png",
+      img: "Images/team6.jpg",
       parentTilt: "rotate-[4deg]",
       imgTilt: "-rotate-[2deg]",
     },
     {
       name: "Ivan Tomic",
       title: "Advisor",
-      img: "Images/team1.png",
+      img: "Images/team7.jpg",
       parentTilt: "-rotate-[4deg]",
       imgTilt: "rotate-[2deg]",
     },
