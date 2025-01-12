@@ -26,7 +26,6 @@ const Modal = ({
   isVideo,
   images,
 }) => {
-  console.log(images[0]);
   const [playing, setPlaying] = useState(false);
   const [volume, setVolume] = useState(0.8);
   const [played, setPlayed] = useState(0);
@@ -209,14 +208,18 @@ const Modal = ({
                             {status}
                           </div>
                         </div>
-                        <div className="flex gap-x-4 mt-8  gap-y-4 w-full sm:gap-x-2">
-                          <button className="h-14 orange-gradient rounded-md w-full">
-                            {btnTitle}
-                          </button>
-                          <span className="text-white bg-[#0E101C] w-16 rounded-md grid place-items-center text-4xl">
-                            <IoMdHeartEmpty />
-                          </span>
-                        </div>
+                        {title.includes("Nexus") ? (
+                          ""
+                        ) : (
+                          <div className="flex gap-x-4 mt-8  gap-y-4 w-full sm:gap-x-2">
+                            <button className="h-14 orange-gradient rounded-md w-full">
+                              {btnTitle}
+                            </button>
+                            <span className="text-white bg-[#0E101C] w-16 rounded-md grid place-items-center text-4xl">
+                              <IoMdHeartEmpty />
+                            </span>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>

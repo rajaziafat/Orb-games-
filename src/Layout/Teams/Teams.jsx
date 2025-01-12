@@ -18,9 +18,10 @@ const Teams = () => {
     {
       name: "Daniel Jensen",
       title: "CEO",
-      img: "Images/team1.jpg",
+      img: "Images/team1.jpeg",
       parentTilt: "-rotate-[4deg]",
       imgTilt: "rotate-[2deg]",
+      linkedinLink: "https://www.linkedin.com/in/dan-jensen-b66b56118/",
     },
     {
       name: "Kai Hatherley",
@@ -28,14 +29,16 @@ const Teams = () => {
       img: "Images/team2.jpg",
       parentTilt: "rotate-[4deg]",
       imgTilt: "-rotate-[2deg]",
+      linkedinLink: "https://www.linkedin.com/in/kaiashfordhatherly/",
     },
     {
       name: "Christopher (Lav) Taylor",
       title: "Head of Game Development",
-      img: "Images/team3.png",
+      img: "Images/team3.jpg",
       parentTilt: "-rotate-[4deg]",
       imgTilt: "rotate-[2deg]",
       className: "md:mb-10",
+      linkedinLink: "",
     },
     {
       name: "Artem Zaitsev",
@@ -43,6 +46,7 @@ const Teams = () => {
       img: "Images/team4.jpg",
       parentTilt: "rotate-[4deg]",
       imgTilt: "-rotate-[2deg]",
+      linkedinLink: "https://www.linkedin.com/in/artem-zaitsev-cto/",
     },
     {
       name: "Marek Benda",
@@ -50,6 +54,7 @@ const Teams = () => {
       img: "Images/team5.jpg",
       parentTilt: "-rotate-[4deg]",
       imgTilt: "rotate-[2deg]",
+      linkedinLink: "",
     },
     {
       name: "Jung Woong Park",
@@ -57,6 +62,7 @@ const Teams = () => {
       img: "Images/team6.jpg",
       parentTilt: "rotate-[4deg]",
       imgTilt: "-rotate-[2deg]",
+      linkedinLink: "https://www.linkedin.com/in/parkjungwoong/",
     },
     {
       name: "Ivan Tomic",
@@ -64,6 +70,7 @@ const Teams = () => {
       img: "Images/team7.jpg",
       parentTilt: "-rotate-[4deg]",
       imgTilt: "rotate-[2deg]",
+      linkedinLink: "https://www.linkedin.com/in/ivantomic12/",
     },
   ];
 
@@ -94,6 +101,7 @@ const Teams = () => {
               img={member.img}
               className={member.className}
               title={`${member.name} - ${member.title}`}
+              linkedinLink={member?.linkedinLink}
             />
           ))}
         </motion.div>
@@ -108,33 +116,6 @@ const Teams = () => {
             modules={[Pagination, Autoplay]}
             className="mySwiper w-full h-full"
           >
-            {/* {teamMembers
-              .reduce((groups, member, index) => {
-                const groupIndex = Math.floor(index / 3); // Grouping every 3 items
-                if (!groups[groupIndex]) {
-                  groups[groupIndex] = [];
-                }
-                groups[groupIndex].push(member);
-                return groups;
-              }, [])
-              .map((group, groupIndex) => (
-                <SwiperSlide
-                  key={groupIndex}
-                  className="flex justify-center items-center text-center"
-                >
-                  <div className="mt-5 relative z-10 flex justify-center gap-16 slg:flex-wrap">
-                    {group.map((member, index) => (
-                      <TeamsCard
-                        key={index}
-                        parentTilt={member.parentTilt}
-                        imgTilt={member.imgTilt}
-                        img={member.img}
-                        title={`${member.name} - ${member.title}`}
-                      />
-                    ))}
-                  </div>
-                </SwiperSlide>
-              ))} */}
             {teamMembers
               .reduce((groups, member, index) => {
                 const groupIndex = Math.floor(index / 3); // Grouping every 3 items
@@ -163,6 +144,7 @@ const Teams = () => {
                           imgTilt={member.imgTilt}
                           img={member.img}
                           title={`${member.name} - ${member.title}`}
+                          linkedinLink={member?.linkedinLink}
                         />
                       ))}
                     </div>

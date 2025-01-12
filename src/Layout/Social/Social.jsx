@@ -79,7 +79,7 @@ const Social = () => {
                     </svg>
                   </a>
                 </motion.span>
-                <motion.span {...fadeInFromLeft(0.3)}>
+                {/* <motion.span {...fadeInFromLeft(0.3)}>
                   <a
                     target="_blank"
                     href="#"
@@ -87,7 +87,7 @@ const Social = () => {
                   >
                     <FaDiscord />
                   </a>
-                </motion.span>
+                </motion.span> */}
               </div>
             </div>
           </div>
@@ -148,14 +148,14 @@ const Social = () => {
                   />
                 </svg>
               </motion.a>
-              <motion.a
+              {/* <motion.a
                 {...fadeInFromLeft(0.7)}
                 target="_blank"
                 href="#"
                 className="w-12 h-12 rounded-xl bg-[#191E29] grid place-items-center text-2xl text-white hover:bg-white hover:text-[#191e29] "
               >
                 <FaDiscord />
-              </motion.a>
+              </motion.a> */}
             </div>
           </div>
           <motion.img src="Images/robot.png" className="w-full" alt="" />

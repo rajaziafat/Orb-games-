@@ -1,6 +1,9 @@
 const TeamsCard = (props) => {
+  console.log(props);
   return (
-    <div
+    <a
+      href={props.linkedinLink}
+      target="_blank"
       className={`w-[202px] h-[237px] flex flex-col items-center ${props.className}`}
     >
       <div
@@ -15,7 +18,7 @@ const TeamsCard = (props) => {
       <h3 className="font-popins text-lg mt-4 text-white uppercase text-center font-semibold">
         {props.title}
       </h3>
-    </div>
+    </a>
   );
 };
 
