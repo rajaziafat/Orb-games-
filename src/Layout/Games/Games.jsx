@@ -37,6 +37,7 @@ const Games = () => {
                 "/Images/g1_3.png",
                 "/Images/g1_4.png",
                 "/Images/g1_5.png",
+                "/Images/g1_6.png",
               ]}
             />
             <GamesCard
