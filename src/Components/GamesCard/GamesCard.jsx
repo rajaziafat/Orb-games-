@@ -71,6 +71,7 @@ const GamesCard = (props) => {
         description={props?.description}
         btnTitle={props?.btnTitle}
         tags={props?.tags}
+        btnLink={props?.btnLink}
       />
     </>
   );

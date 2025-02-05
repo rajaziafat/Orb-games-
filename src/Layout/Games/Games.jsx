@@ -39,6 +39,7 @@ const Games = () => {
                 "/Images/g1_5.png",
                 "/Images/g1_6.png",
               ]}
+              btnLink="https://docs.google.com/forms/d/e/1FAIpQLSdCurl1SLnIrE8XDZfR1iymz8SLA1x8uwGEHbGKLGoLsLC2Dw/viewform?usp=sharing"
             />
             <GamesCard
               index={2}
@@ -51,6 +52,8 @@ const Games = () => {
               tags={["Card Games", "Strategy"]}
               images={["/Videos/g2.mp4"]}
               isVideo={true}
+              btnLink="https://docs.google.com/forms/d/e/1FAIpQLSeaw0S6Xd7wkA7-C-AR52RqSzBl990iBy7Bxsx72iWo6FF_Pg/viewform?usp=sharing
+"
             />
             <GamesCard
               index={3}

@@ -67,7 +67,7 @@ const Footer = () => {
                     to="team"
                     className="cursor-pointer duration-500 hover:text-white"
                   >
-                    Teams
+                    Team
                   </Link>
                 </li>
                 <li>

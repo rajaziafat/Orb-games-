@@ -82,7 +82,7 @@ const NavBar = () => {
               showNavBar ? "translate-x-0" : "-translate-x-full"
             }`}
           >
-            <div className="flex justify-between px-5 py-4 pt-12 items-center w-full">
+            <div className="flex justify-between px-5 py-4 pt-7 items-center w-full">
               <div className="">
                 <img loading="lazy" src="/Images/logo.png" alt="" />
               </div>

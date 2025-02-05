@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { fadeInFromLeft } from "../../utils/helpers/Animation/FadeFromLeftAnimation";
 const Hero = () => {
   return (
-    <div className="bg-heroBg home  bg-cover bg-no-repeat  h-[1277px] bg-center sm:h-[1300px]  md:h-[1500px]">
+    <div className="bg-heroBg home sm:bg-heromobileBg  bg-cover bg-no-repeat  h-[1277px] bg-center sm:h-[1300px]  md:h-[1500px]">
       <NavBar />
       <div className="pt-24 sm:pt-14">
         <Helmet>

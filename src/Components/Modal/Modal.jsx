@@ -25,6 +25,7 @@ const Modal = ({
   title,
   isVideo,
   images,
+  btnLink,
 }) => {
   const [playing, setPlaying] = useState(false);
   const [volume, setVolume] = useState(0.8);
@@ -145,30 +146,6 @@ const Modal = ({
                                 </SwiperSlide>
                               );
                             })}
-                            {/* <SwiperSlide onClick={() => selectVideo(3)}>
-                              <ModalVideoCard img={3} />
-                            </SwiperSlide>
-                            <SwiperSlide onClick={() => selectVideo(2)}>
-                              <ModalVideoCard img={2} />
-                            </SwiperSlide>
-                            <SwiperSlide onClick={() => selectVideo(1)}>
-                              <ModalVideoCard img={1} />
-                            </SwiperSlide>
-                            <SwiperSlide onClick={() => selectVideo(3)}>
-                              <ModalVideoCard img={3} />
-                            </SwiperSlide>
-                            <SwiperSlide onClick={() => selectVideo(2)}>
-                              <ModalVideoCard img={2} />
-                            </SwiperSlide>
-                            <SwiperSlide onClick={() => selectVideo(1)}>
-                              <ModalVideoCard img={1} />
-                            </SwiperSlide>
-                            <SwiperSlide onClick={() => selectVideo(3)}>
-                              <ModalVideoCard img={3} />
-                            </SwiperSlide>
-                            <SwiperSlide onClick={() => selectVideo(2)}>
-                              <ModalVideoCard img={2} />
-                            </SwiperSlide> */}
                           </Swiper>
                         </div>
                       </div>
@@ -189,17 +166,33 @@ const Modal = ({
                         <h1 className="font-neuro  text-6xl mt-4 md:text-5xl sm:text-4xl">
                           {title}
                         </h1>
-                        <p className="font-popins text-[#A1A1A1] text-lg my-8">
+                        <p className="font-popins text-[#A1A1A1] text-lg mt-6 mb-4">
                           {description}
                         </p>
-                        {/* <div className="flex gap-x-7 items-center my-5 sm:justify-center">
-                          <h3 className="font-medium font-popins text-xl ">
-                            Developer:
-                          </h3>
-                          <div className="orange-gradient rounded-md px-2 w-max text-sm py-1">
-                            Roit Games
+
+                        {title === "Epoch Defense" ? (
+                          <div className="flex gap-4 flex-wrap mb-5">
+                            <a
+                              onClick={closeModal}
+                              href="https://drive.google.com/drive/folders/1HbpWWWc769dHQ03VaEb1bncdTxhiOvmu?usp=drive_link"
+                              target="_blank"
+                              className="orange-gradient rounded-md px-4 py-2"
+                            >
+                              Game Assets
+                            </a>
+                            <a
+                              onClick={closeModal}
+                              href="https://substack.com/@epochgames"
+                              target="_blank"
+                              className="orange-gradient rounded-md px-4 py-2"
+                            >
+                              Devlogs
+                            </a>
                           </div>
-                        </div> */}
+                        ) : (
+                          ""
+                        )}
+
                         <div className="flex gap-x-7 items-center sm:justify-center">
                           <h3 className="font-medium font-popins text-xl ">
                             Status:
@@ -212,9 +205,14 @@ const Modal = ({
                           ""
                         ) : (
                           <div className="flex gap-x-4 mt-8  gap-y-4 w-full sm:gap-x-2">
-                            <button className="h-14 orange-gradient rounded-md w-full">
+                            <a
+                              onClick={closeModal}
+                              href={btnLink ? btnLink : "#"}
+                              target={btnLink ? "_blank" : "_self"}
+                              className="h-14 grid place-items-center orange-gradient rounded-md w-full"
+                            >
                               {btnTitle}
-                            </button>
+                            </a>
                             <span className="text-white bg-[#0E101C] w-16 rounded-md grid place-items-center text-4xl">
                               <IoMdHeartEmpty />
                             </span>

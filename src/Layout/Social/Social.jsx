@@ -108,7 +108,7 @@ const Social = () => {
               <motion.a
                 {...fadeInFromLeft(0.3)}
                 target="_blank"
-                href="#"
+                href="https://t.me/Epoch_Games"
                 className="w-12 h-12 rounded-xl bg-[#191E29] grid place-items-center text-2xl text-white hover:bg-white hover:text-[#191e29] "
               >
                 <BsTelegram />
@@ -116,7 +116,7 @@ const Social = () => {
               <motion.a
                 {...fadeInFromLeft(0.4)}
                 target="_blank"
-                href="#"
+                href="https://x.com/epochgamesio"
                 className="w-12 h-12 rounded-xl bg-[#191E29] grid place-items-center text-2xl text-white hover:bg-white hover:text-[#191e29] "
               >
                 <FaXTwitter />
@@ -124,15 +124,23 @@ const Social = () => {
               <motion.a
                 {...fadeInFromLeft(0.5)}
                 target="_blank"
-                href="#"
+                href="https://medium.com/epoch-games"
                 className="w-12 h-12 rounded-xl bg-[#191E29] grid place-items-center text-2xl text-white hover:bg-white hover:text-[#191e29] "
               >
                 <BsMedium />
               </motion.a>
               <motion.a
+                {...fadeInFromLeft(0.5)}
+                target="_blank"
+                href="https://substack.com/@epochgames"
+                className="w-12 h-12 rounded-xl bg-[#191E29] grid place-items-center text-2xl text-white hover:bg-white hover:text-[#191e29] "
+              >
+                <BsSubstack />
+              </motion.a>
+              <motion.a
                 {...fadeInFromLeft(0.6)}
                 target="_blank"
-                href="#"
+                href="https://epoch-games.gitbook.io/epoch-games"
                 className="w-12 h-12 rounded-xl bg-[#191E29] grid place-items-center text-2xl text-white hover:bg-white hover:text-[#191e29]  group"
               >
                 {/* <SiGitbook /> */}

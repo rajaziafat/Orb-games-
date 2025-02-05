@@ -15,7 +15,7 @@ export default {
     extend: {
       backgroundImage: {
         heroBg: "url('/Images/Heros-bg.png')",
-        heromobileBg: "url('/Images/mobile.png')",
+        heromobileBg: "url('/Images/hero-mobile.png')",
         scoailBg: "url('/Images/Social2.png')",
         scoailMobileBg: "url('/Images/social-mobile.png')",
       },

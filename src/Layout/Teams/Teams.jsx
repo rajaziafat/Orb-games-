@@ -114,11 +114,11 @@ const Teams = () => {
             autoplay={true}
             speed={1400}
             modules={[Pagination, Autoplay]}
-            className="mySwiper w-full h-full"
+            className="mySwiper w-full h-full pb-5"
           >
-            {teamMembers
+            {/* {teamMembers
               .reduce((groups, member, index) => {
-                const groupIndex = Math.floor(index / 3); // Grouping every 3 items
+                const groupIndex = Math.floor(index / 3); 
                 if (!groups[groupIndex]) {
                   groups[groupIndex] = [];
                 }
@@ -126,10 +126,10 @@ const Teams = () => {
                 return groups;
               }, [])
               .map((group, groupIndex, allGroups) => {
-                // If it's the last group and has less than 3 members
+             
                 if (groupIndex === allGroups.length - 1 && group.length < 3) {
-                  const itemsToAdd = 3 - group.length; // Calculate how many items to add
-                  group.push(...teamMembers.slice(0, itemsToAdd)); // Add the first 'itemsToAdd' members
+                  const itemsToAdd = 3 - group.length; 
+                  group.push(...teamMembers.slice(0, itemsToAdd));
                 }
                 return (
                   <SwiperSlide
@@ -150,7 +150,30 @@ const Teams = () => {
                     </div>
                   </SwiperSlide>
                 );
-              })}
+              })} */}
+            {[0, 3, 6]?.map((item) => {
+              return (
+                <SwiperSlide
+                  key={item}
+                  className="flex justify-center items-center text-center"
+                >
+                  <div className="mt-5 relative z-10 flex justify-center gap-10 slg:flex-wrap">
+                    {teamMembers
+                      ?.slice(item, item + 3)
+                      ?.map((member, index) => (
+                        <TeamsCard
+                          key={index}
+                          parentTilt={member.parentTilt}
+                          imgTilt={member.imgTilt}
+                          img={member.img}
+                          title={`${member.name} - ${member.title}`}
+                          linkedinLink={member?.linkedinLink}
+                        />
+                      ))}
+                  </div>
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
           <div className="swiper-custom-pagination  flex justify-center mt-10"></div>
         </div>
